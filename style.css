@@ -1,5 +1,16 @@
 /* google font  */
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lobster&display=swap');
+
+:root {
+  /* text font  */
+  --var--inter: "Inter", sans-serif;
+  --var--lobster: "Lobster", serif;
+  /* color  */
+  --var--text-black: "#000000";
+  --var--text-2: "rgba(0, 0, 0, 0.6)";
+  --var--bg-1: "#E7FAFE";
+  --var--bg-2: "rgba(0, 0, 0, 0.05)"
+}
 
 /* reset  */
 * {
@@ -7,4 +18,124 @@
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--var--inter);
+  font-weight: 500;
+  color: var(--var--text-black);
+}
+
+/* global css  */
+
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container {
+  width: 1280px;
+  margin: auto;
+}
+
+/* header section  */
+.header-wrapper {
+  position: sticky;
+  top: 0;
+  left: 0;
+  padding: 40px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  background: white;
+}
+
+.header-continer h4 {
+  font-size: 24px;
+  font-family: var(--var--lobster);
+  font-weight: 400;
+  color: var(--var--text-black);
+}
+
+.header-continer h4 span {
+  color: #FF7426;
+}
+
+.navber ul {
+  gap: 60px;
+}
+
+.navber ul li {
+  list-style: none;
+  padding-bottom: 5px;
+  position: relative;
+}
+
+.navber ul li a {
+  font-size: 16px;
+  font-family: var(--var--inter);
+  font-weight: 500;
+  letter-spacing: -2%;
+  color: var(--var--text-black);
+  text-decoration: none;
+  cursor: pointer;
+  transition: .3s ease;
+}
+
+.navber ul li .active {
+  color: #FF7426;
+}
+
+
+.navber ul li a:hover {
+  color: #FF7426;
+}
+
+.navber ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  height: 2px;
+  background-color: #FF7426;
+  transform: scale(0, 1);
+  transform-origin: 0% 100%;
+  transition: .3s ease;
+}
+
+.navber ul li a:hover::after {
+  transform: scale(1, 1);
+}
+
+
+.navber ul li .active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  height: 2px;
+  background-color: #FF7426;
+  transform: scale(1, 1);
+}
+
+.socile-icon {
+  gap: 40px;
+  cursor: pointer;
+}
+
+.socile-icon i {
+  transition: .3s;
+}
+
+.socile-icon i:hover {
+  color: #FF7426;
+  cursor: pointer;
 }
