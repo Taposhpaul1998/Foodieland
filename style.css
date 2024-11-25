@@ -6,10 +6,10 @@
   --var--inter: "Inter", sans-serif;
   --var--lobster: "Lobster", serif;
   /* color  */
-  --var--text-black: "#000000";
-  --var--text-2: "rgba(0, 0, 0, 0.6)";
-  --var--bg-1: "#E7FAFE";
-  --var--bg-2: "rgba(0, 0, 0, 0.05)"
+  --var--text-black: #000000;
+  --var--text-2: rgba(0, 0, 0, 0.6);
+  --var--bg-1: #E7FAFE;
+  --var--bg-2: rgba(0, 0, 0, 0.05);
 }
 
 /* reset  */
@@ -44,6 +44,24 @@ body {
 .container {
   width: 1280px;
   margin: auto;
+}
+
+.btn {
+  font-size: 14px;
+  font-family: var(--var--inter);
+  font-weight: 600;
+  letter-spacing: -2%;
+  color: #FFFFFF;
+  background: #000000;
+  cursor: pointer;
+  border-radius: 16px;
+  border: 1px solid #000000;
+  transition: .5s ease;
+}
+
+.btn:hover {
+  color: #000000;
+  background: #FFFFFF;
 }
 
 /* header section  */
@@ -138,4 +156,141 @@ body {
 .socile-icon i:hover {
   color: #FF7426;
   cursor: pointer;
+}
+
+/* hero section  */
+.hero-wrapper {
+  padding-top: 40px;
+  padding-bottom: 160px;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+
+.hero-block-left {
+  width: 60px;
+  height: 600px;
+  background-color: var(--var--bg-1);
+  margin-right: 40px;
+  border-radius: 0 43px 43px 0;
+}
+
+.hero-block-right {
+  width: 60px;
+  height: 600px;
+  background-color: var(--var--bg-1);
+  margin-left: 40px;
+  border-radius: 43px 0 0 43px;
+}
+
+.hero-container {
+  display: flex;
+  justify-content: center;
+}
+
+.hero-left {
+  background-color: var(--var--bg-1);
+  border-radius: 43px 0 0 43px;
+  padding: 50px;
+}
+
+.hero-left .h-resipes {
+  width: 162px;
+  background-color: #FFFFFF;
+  padding: 11px 20px 10px 20px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.hero-left .h-resipes img {
+  margin-right: 13px;
+}
+
+.hero-left .h-resipes span {
+  font-size: 14px;
+  font-family: var(--var--inter);
+  font-weight: 600;
+  letter-spacing: -2%;
+  color: var(--var--text-black);
+}
+
+.hero-left h1 {
+  font-size: 64px;
+  font-family: var(--var--inter);
+  font-weight: 600;
+  letter-spacing: -4%;
+  color: var(--var--text-black);
+  margin-top: 32px;
+  margin-bottom: 24px;
+}
+
+.hero-left p {
+  font-size: 16px;
+  font-family: var(--var--inter);
+  font-weight: 400;
+  line-height: 28px;
+  color: var(--var--text-2);
+  margin-bottom: 30px;
+}
+
+.hero-left .time-name {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 16px;
+}
+
+.hero-left .time-name div {
+  padding: 8px 16px;
+  background: var(--var--bg-2);
+  border-radius: 30px;
+}
+
+.hero-left .time-name div span {
+  font-size: 14px;
+  font-family: var(--var--inter);
+  font-weight: 500;
+  letter-spacing: -2%;
+  color: var(--var--text-2);
+  margin-left: 10px;
+}
+
+.hero-left .user-btn {
+  margin-top: 99px;
+}
+
+.hero-left .user-btn .user {
+  gap: 16px;
+}
+
+.hero-left .user-btn .user h6 {
+  font-size: 16px;
+  font-family: var(--var--inter);
+  font-weight: 700;
+  letter-spacing: -2%;
+  color: var(--var--text-black);
+  margin-bottom: 8px;
+}
+
+.hero-left .user-btn .user span {
+  font-size: 14px;
+  font-family: var(--var--inter);
+  font-weight: 500;
+  letter-spacing: -2%;
+  color: var(--var--text-2);
+}
+
+.hero-left .user-btn .view-resipe {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  padding: 18px 36px;
+}
+
+.hero-right img {
+  width: 100%;
+  height: 100%;
+  border-radius: 0 43px 43px 0;
 }
