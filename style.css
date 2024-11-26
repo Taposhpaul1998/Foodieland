@@ -201,10 +201,16 @@ body {
   border-radius: 30px;
   display: flex;
   align-items: center;
+  transition: .3s ease;
 }
 
 .hero-left .h-resipes img {
   margin-right: 13px;
+}
+
+.hero-left .h-resipes:hover {
+  box-shadow: 0 6px 10px var(--var--bg-2);
+  cursor: pointer;
 }
 
 .hero-left .h-resipes span {
