@@ -80,6 +80,7 @@ body {
   padding: 40px 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   background: white;
+  z-index: 999;
 }
 
 .header-continer h4 {
@@ -248,20 +249,20 @@ body {
   margin-bottom: 30px;
 }
 
-.hero-left .time-name {
+.time-name {
   display: flex;
   justify-content: start;
   align-items: center;
   gap: 16px;
 }
 
-.hero-left .time-name div {
+.time-name .time-n {
   padding: 8px 16px;
   background: var(--var--bg-2);
   border-radius: 30px;
 }
 
-.hero-left .time-name div span {
+.time-name span {
   font-size: 14px;
   font-family: var(--var--inter);
   font-weight: 500;
@@ -303,10 +304,23 @@ body {
   padding: 18px 36px;
 }
 
+.hero-right {
+  position: relative;
+  z-index: 1;
+}
+
 .hero-right img {
   width: 100%;
   height: 100%;
   border-radius: 0 43px 43px 0;
+}
+
+.hero-right .badge {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: 50px;
+  left: -50px;
 }
 
 /* categories section  */
@@ -431,7 +445,7 @@ body {
 }
 
 .categories-carts .chocoate img {
-  filter: drop-shadow(13px 13px 10px rgba(204, 38, 27, 0.3));
+  filter: drop-shadow(13px 13px 10px rgba(204, 38, 27, 0.4));
   z-index: -1;
 
 }
@@ -439,4 +453,94 @@ body {
 .categories-carts .chocoate:hover {
   background: linear-gradient(to top, rgb(0, 0, 0, 0.15), rgb(0, 0, 0, 0));
   cursor: pointer;
+}
+
+/* resipes section  */
+#resipes {
+  margin-bottom: 143px;
+}
+
+.resipes-title-text {
+  text-align: center;
+  margin-bottom: 96px;
+}
+
+.resipes-title-text p {
+  font-size: 16px;
+  font-family: var(--var--inter);
+  font-weight: 400;
+  line-height: 28px;
+  color: var(--var--text-2);
+  margin-top: 24px;
+}
+
+.resipes-cards {
+  gap: 40px;
+}
+
+.resipe-card {
+  width: 400px;
+  border-radius: 30px;
+  padding: 16px 16px 32px 16px;
+  background: linear-gradient(to top, #E7F9FD, #e7f9fd00);
+  position: relative;
+}
+
+.resipe-card img {
+  border-radius: 30px;
+  margin-bottom: 24px;
+}
+
+.resipe-card h3 {
+  font-size: 24px;
+  font-family: var(--var--inter);
+  font-weight: 600;
+  line-height: 32px;
+  letter-spacing: -4%;
+  color: var(--var--text-black);
+  margin-bottom: 24px;
+  padding: 0 8px;
+}
+
+.resipe-card .time-name {
+  display: flex;
+  gap: 24px;
+  padding: 0 8px;
+}
+
+.resipe-card .circle {
+  position: absolute;
+  top: 36px;
+  right: 36px;
+}
+
+.resipe-card .fa-heart {
+  font-size: 24px;
+  position: absolute;
+  top: 50px;
+  right: 48px;
+  color: #DBE2E5;
+  transition: .3s ease;
+}
+
+.resipe-card .fa-heart:hover {
+  color: #FF6363;
+  cursor: pointer;
+}
+
+.resipe-card .active {
+  color: #FF6363;
+}
+
+.ads {
+  width: 400px;
+}
+
+.ads img {
+  width: 100%;
+}
+
+/* learn more section  */
+.learn-more-wrapper {
+  margin-bottom: 160px;
 }
