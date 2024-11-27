@@ -542,5 +542,69 @@ body {
 
 /* learn more section  */
 .learn-more-wrapper {
+  display: flex;
+  justify-content: space-between;
   margin-bottom: 160px;
+}
+
+.learn-left {
+  padding: 169px 38px 72px 0;
+}
+
+.learn-left h2 {
+  margin-bottom: 24px;
+}
+
+.learn-left p {
+  font-size: 16px;
+  font-family: var(--var--inter);
+  font-weight: 400;
+  line-height: 28px;
+  color: var(--var--text-2);
+  margin-bottom: 72px;
+}
+
+.learn-left .learn-btn {
+  padding: 21px 53px 22px 52px;
+}
+
+.learn-right {
+  padding-top: 97px;
+  padding-left: 59px;
+  position: relative;
+}
+
+.learn-right .chef {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.learn-right .tomatu {
+  position: absolute;
+  left: 34px;
+  bottom: 124px;
+}
+
+.learn-right .meat {
+  width: 80px;
+  height: 80px;
+  transform: rotate(-15deg);
+  position: absolute;
+  top: 70px;
+  left: 102px;
+}
+
+.learn-right .vegan {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: 167px;
+  right: 36px;
+}
+
+.learn-right .onion {
+  position: absolute;
+  top: 97px;
+  right: 180px;
 }
