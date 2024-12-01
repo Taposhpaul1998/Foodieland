@@ -124,38 +124,30 @@ a {
 }
 
 .single__cart img {
+  width: 100%;
   border-radius: 30px;
-  margin-bottom: 24px;
 }
 
 .single__cart h3 {
-  font-size: 24px;
   font-family: var(--var--inter);
   font-weight: 600;
-  line-height: 32px;
-  letter-spacing: -1.9px;
   color: var(--var--text-black);
   margin-bottom: 24px;
-  padding: 0 8px;
 }
 
 .single__cart .time__name {
   display: flex;
   gap: 24px;
-  padding: 0 8px;
 }
 
 .single__cart .circle {
+  width: 48px;
   position: absolute;
-  top: 36px;
-  right: 36px;
 }
 
 .single__cart .fa-heart {
   font-size: 24px;
   position: absolute;
-  top: 50px;
-  right: 48px;
   color: #DBE2E5;
   transition: .3s ease;
 }
@@ -551,6 +543,31 @@ a {
   background: linear-gradient(to top, #E7F9FD, #e7f9fd00);
 }
 
+.single__cart--resipe img {
+  margin-bottom: 24px;
+}
+
+.single__cart--resipe h3 {
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -1.9px;
+  padding: 0 8px;
+}
+
+.single__cart .time__name {
+  padding: 0 8px;
+}
+
+.single__cart .circle {
+  top: 36px;
+  right: 36px;
+}
+
+.single__cart .fa-heart {
+  top: 50px;
+  right: 48px;
+}
+
 /* learn more section  */
 .learn__more-wrapper {
   margin-bottom: 160px;
@@ -625,11 +642,6 @@ a {
   padding: 80px 0px;
   background: linear-gradient(to top, #E7F9FD, #e7f9fd00);
   margin-bottom: 160px;
-}
-
-.instagram__wrapper--container {
-  display: block;
-  text-align: center;
 }
 
 .instagram__title {
@@ -764,11 +776,57 @@ a {
   width: 13px;
 }
 
-.btn__view--instragram {
+.btn__view--instagram {
   margin-top: 80px;
   padding: 19px 32px;
 }
 
-.btn__view--instragram i {
+.btn__view--instagram i {
   margin-left: 17px;
+}
+
+.instagram__btn {
+  text-align: center;
+}
+
+/* more resipes section  */
+.more__resipes-wrapper {
+  margin-bottom: 160px;
+}
+
+.more__resipes-title {
+  gap: 153px;
+  margin-bottom: 80px;
+}
+
+.more__resipes-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 40px;
+}
+
+.more__single--cart {
+  max-width: 100%;
+}
+
+.more__single--cart img {
+  margin-bottom: 16px;
+}
+
+.more__single--cart h3 {
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: -0.7px;
+}
+
+.more__single--cart .circle {
+  width: 48px;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}
+
+.more__single--cart .fa-heart {
+  top: 28px;
+  right: 28px;
 }
