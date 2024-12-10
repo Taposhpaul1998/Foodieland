@@ -1010,6 +1010,42 @@ li {
   right: 0;
 }
 
+.scrollup__btn {
+  position: fixed;
+  bottom: 120px;
+  right: 50px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, background-color 0.3s;
+}
+
+.scrollup__btn i {
+  width: 43px;
+  height: 43px;
+  font-size: 1.125rem;
+  background-color: #fff;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: #FF7426;
+  transition: .3s ease;
+}
+
+.scrollup__btn:hover i {
+  color: #ff5200fa;
+}
+
+.scrollup__btn.visible {
+  opacity: 1;
+  visibility: visible;
+}
 
 /* resposive breakpoints  */
 

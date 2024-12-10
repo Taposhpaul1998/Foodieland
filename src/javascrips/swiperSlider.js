@@ -3,7 +3,7 @@
 new Swiper('.hero__slider', {
     // Optional parameters
     loop: true,
-    speed: 1500,
+    speed: 2500,
     autoplay: {
         delay: 2000,
     }
