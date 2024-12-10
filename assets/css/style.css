@@ -54,12 +54,8 @@ li {
 }
 
 .container {
-  width: 1280px;
+  width: min(95%, 1280px);
   margin-inline: auto;
-}
-
-.ads {
-  width: 400px;
 }
 
 .ads:hover {
@@ -84,7 +80,7 @@ li {
 }
 
 .time__name span {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: var(--var--inter);
   font-weight: 500;
   letter-spacing: -0.3px;
@@ -93,15 +89,19 @@ li {
 }
 
 .section__title h2 {
-  font-size: 48px;
+  font-size: clamp(1.125rem, 0rem + 3.75vw, 3rem);
   font-family: var(--var--inter);
   font-weight: 600;
   letter-spacing: -1.9px;
   color: var(--var--text-black);
 }
 
+.section__discription {
+  margin-inline: auto;
+}
+
 .section__discription p {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: var(--var--inter);
   font-weight: 400;
   line-height: 28px;
@@ -109,7 +109,7 @@ li {
 }
 
 .btn {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: var(--var--inter);
   font-weight: 600;
   letter-spacing: -0.3px;
@@ -155,7 +155,7 @@ li {
 }
 
 .single__cart .fa-heart {
-  font-size: 24px;
+  font-size: 1.5rem;
   position: absolute;
   color: #DBE2E5;
   transition: .3s ease;
@@ -188,7 +188,7 @@ li {
 }
 
 .logo {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-family: var(--var--lobster);
   font-weight: 400;
   color: var(--var--text-black);
@@ -216,7 +216,7 @@ li {
 }
 
 .navber__list li a {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: var(--var--inter);
   font-weight: 500;
   letter-spacing: -0.3px;
@@ -296,7 +296,7 @@ li {
 /* hero section  */
 .hero__wrapper {
   padding-top: 40px;
-  padding-bottom: 160px;
+  margin-bottom: 160px;
   display: flex;
   justify-items: center;
   align-items: center;
@@ -307,11 +307,15 @@ li {
   overflow: hidden;
 }
 
+.hero__container {
+  border-radius: 43px;
+  overflow: hidden;
+}
+
 .hero__slider--left {
   width: 620px;
   height: 640px;
   background-color: var(--var--bg-1);
-  border-radius: 43px 0 0 43px;
   padding: 50px;
 }
 
@@ -336,7 +340,7 @@ li {
 }
 
 .hero__slider--left .hot__resipes span {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: var(--var--inter);
   font-weight: 600;
   letter-spacing: -0.3px;
@@ -348,7 +352,7 @@ li {
 }
 
 .hero__title h1 {
-  font-size: 64px;
+  font-size: clamp(2rem, 0.8rem + 4vw, 4rem);
   font-family: var(--var--inter);
   font-weight: 600;
   letter-spacing: -1.9px;
@@ -360,7 +364,7 @@ li {
 }
 
 .hero__discription p {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: var(--var--inter);
   font-weight: 400;
   line-height: 28px;
@@ -376,7 +380,7 @@ li {
 }
 
 .hero__slider--left .user__btn .user h6 {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: var(--var--inter);
   font-weight: 700;
   letter-spacing: -0.3px;
@@ -385,7 +389,7 @@ li {
 }
 
 .hero__slider--left .user__btn .user span {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: var(--var--inter);
   font-weight: 500;
   letter-spacing: -0.3px;
@@ -410,7 +414,6 @@ li {
 .hero__slider--right img {
   width: 100%;
   height: 100%;
-  border-radius: 0 43px 43px 0;
 }
 
 .hero__slider--right .hero__right--badge {
@@ -435,7 +438,7 @@ li {
 }
 
 .categories__title .view__categories {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: var(--var--inter);
   font-weight: 600;
   letter-spacing: -0.3px;
@@ -568,13 +571,17 @@ li {
   margin-bottom: 96px;
 }
 
+.section__discription--resipes {
+  width: 706px;
+}
+
 .resipes__title .section__title--resipes {
   margin-bottom: 24px;
 }
 
 .resipes__cards {
   display: grid;
-  grid-template-columns: repeat(3, 400px);
+  grid-template-columns: repeat(3, 1fr);
   gap: 40px;
 }
 
@@ -594,7 +601,7 @@ li {
 }
 
 .single__cart--resipe h3 {
-  font-size: 24px;
+  font-size: 1.5rem;
   line-height: 32px;
   letter-spacing: -1.0px;
   padding: 0 8px;
@@ -633,6 +640,7 @@ li {
 }
 
 .learn__section--discription {
+  margin-right: 22px;
   margin-bottom: 72px;
 }
 
@@ -645,6 +653,12 @@ li {
   padding-top: 97px;
   padding-left: 59px;
   position: relative;
+}
+
+.learn__righ .learn__right-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .learn__right .img__chef {
@@ -701,13 +715,12 @@ li {
 
 .instagram__posts {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 40px;
 
 }
 
 .single__post {
-  width: 290px;
   background: #FFFFFF;
 }
 
@@ -716,7 +729,7 @@ li {
 }
 
 .post__header i {
-  font-size: 11px;
+  font-size: 0.6875rem;
 }
 
 .post__header .post__icon-name {
@@ -847,7 +860,7 @@ li {
 
 .more__resipes-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 40px;
 }
 
@@ -866,7 +879,7 @@ li {
 
 
 .more__single--cart h3 {
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 28px;
   letter-spacing: -0.7px;
 }
@@ -906,6 +919,10 @@ li {
 
 .subscribe__title .section__title {
   margin-bottom: 24px;
+}
+
+.subscribe__title .section__discription {
+  width: 620px;
 }
 
 .subscribe__input {
@@ -951,7 +968,7 @@ li {
 }
 
 .lego__text p {
-  font-size: 16px;
+  font-size: 1rem;
   font-family: var(--var--inter);
   font-weight: 400;
   line-height: 28px;
@@ -965,7 +982,7 @@ li {
 }
 
 .footer__social p {
-  font-size: 18px;
+  font-size: 1.125rem;
   font-family: var(--var--inter);
   font-weight: 500;
   letter-spacing: -0.4px;
@@ -987,9 +1004,128 @@ li {
 
 
 /* resposive breakpoints  */
+
+@media (max-width: 1200px) {
+
+  /* nav ber  */
+  .navber {
+    gap: 115px;
+  }
+
+  /* hero section  */
+  .hero__wrapper {
+    margin-bottom: 80px;
+  }
+
+  /* categories section  */
+  .categories__wrapper--container {
+    padding-bottom: 80px;
+  }
+
+  /* resipes section  */
+  .single__cart--resipe h3 {
+    font-size: 1.25rem;
+  }
+
+  /* learn more section  */
+  .learn__more-wrapper {
+    margin-bottom: 80px;
+  }
+
+  .learn__left {
+    width: 427px;
+    padding: 65px 0px 30px 0px;
+  }
+
+  .learn__section--discription {
+    margin-bottom: 38px;
+  }
+
+  .learn__right {
+    width: 467px;
+    padding-top: 67px;
+    padding-left: 39px;
+  }
+
+  img.learn__right-bg-img {
+    width: 100%;
+  }
+
+  .learn__right .img__chef {
+    width: 438px;
+  }
+
+  .learn__right .img__meat {
+    width: 50px;
+    height: 50px;
+    top: 50px;
+    left: 82px;
+  }
+
+  .learn__right .img__onion {
+    width: 40px;
+    top: 73px;
+    right: 129px;
+  }
+
+  .learn__right .img__vegan {
+    width: 50px;
+    height: 50px;
+    top: 143px;
+    right: 30px;
+  }
+
+  .learn__right .img__tomatu {
+    width: 40px;
+    left: 18px;
+    bottom: 90px;
+  }
+
+  /* instagram section  */
+  .instagram__wrapper {
+    margin-bottom: 80px;
+  }
+
+  /* more resipes section  */
+  .more__resipes-wrapper {
+    margin-bottom: 115px;
+  }
+
+  .more__resipes-title {
+    gap: 35px;
+  }
+
+  .more__resipes-discription p {
+    width: 509px;
+  }
+
+  .more__single--cart h3 {
+    font-size: 1.0625rem;
+  }
+
+  /* subscribe section  */
+
+  .subscribe__wrapper {
+    margin-bottom: 80px;
+  }
+
+  .subscribe__wrapper--container {
+    padding: 45px 0;
+  }
+
+  .subscribe__bg--left {
+    width: 251px;
+  }
+
+  .subscribe__bg--right {
+    width: 235px;
+  }
+
+}
+
 @media (max-width: 980px) {
-  .container {
-    width: 95%;
+  .btn {
+    font-size: 11px;
   }
 
   /* header section  */
@@ -1038,25 +1174,456 @@ li {
     display: flex;
   }
 
-  /* resipes section  */
-  .resipes__cards {
-    grid-template-columns: repeat(3, 1fr);
+  /* hero section  */
+  .hero__slider--left {
+    width: 620px;
+    height: 562px;
+    padding: 29px;
   }
 
-  .ads {
-    width: 100%;
+  .hero__slider--left .user__btn {
+    margin-top: 57px;
+  }
+
+  .hero__slider--left .user__btn .user h6 {
+    font-size: 13px;
+  }
+
+  .hero__slider--left .user__btn .user span {
+    font-size: 13px;
+  }
+
+  .hero__slider--left .user__btn .view__resipe {
+    padding: 13px 20px;
+  }
+
+  .hero__slider--right {
+    height: 562px;
+  }
+
+  .hero__slider--right .hero__right--badge {
+    width: 105px;
+    height: 105px;
+    top: 30px;
+  }
+
+  /* resipes section  */
+  .resipes__wrapper {
+    margin-bottom: 92px;
+  }
+
+  .resipes__cards {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   /* lear more sectrion  */
-  .learn__right {
-    display: none;
+  .learn__more--container {
+    gap: 25px;
   }
 
+  .learn__section--discription {
+    margin-right: 0px;
+    margin-bottom: 38px;
+  }
+
+  .learn__left {
+    width: 336px;
+    padding: 20px 0px 15px 0px;
+  }
+
+  .learn__section--title {
+    margin-bottom: 13px;
+  }
+
+  .learn__section--discription {
+    margin-right: 0px;
+    margin-bottom: 20px;
+  }
+
+  .section__discription p {
+    font-size: 0.875rem;
+  }
+
+  .learn__left .learn--btn {
+    padding: 13px 28px 14px 27px;
+  }
+
+  .learn__right {
+    width: 372px;
+  }
+
+  .learn__right .img__chef {
+    width: 356px;
+  }
+
+  .learn__right .img__meat {
+    top: 34px;
+    left: 73px;
+  }
+
+  .learn__right .img__onion {
+    top: 63px;
+    right: 92px;
+  }
+
+  .learn__right .img__vegan {
+    top: 91px;
+    right: 16px;
+  }
+
+  .learn__right .img__tomatu {
+    left: 22px;
+    bottom: 67px;
+  }
+
+  /* instagram section  */
+  .instagram__wrapper {
+    padding: 45px 0px;
+    margin-bottom: 97px;
+  }
+
+  .instagram__posts {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* more resipes section */
+
+  .more__resipes-discription p {
+    width: 423px;
+  }
+
+  .more__resipes-title .section__title {
+    text-align: start;
+  }
+
+  .more__resipes-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .more__single--cart h3 {
+    font-size: 1.25rem;
+  }
+
+  /* subscribe section  */
+  .subscribe__wrapper--container {
+    padding: 36px 0;
+  }
+
+  .subscribe__title {
+    margin-bottom: 25px;
+  }
+
+  .subscribe__input {
+    width: 355px;
+  }
+
+  .subscribe__input input {
+    padding: 23px;
+  }
+
+  .subscribe__input .subscribe__btn {
+    top: 8px;
+    right: 8px;
+    padding: 14px 30px;
+  }
+
+  .subscribe__bg--left {
+    width: 197px;
+  }
+
+  .subscribe__bg--right {
+    width: 187px;
+  }
+
+  /* footer section  */
+  .footer__menu {
+    padding-bottom: 12px;
+  }
+
+  .navber__list--footer {
+    flex-direction: row;
+    gap: 21px;
+  }
 }
 
 /* tablet devise  */
 
-@media (max-width: 768px) {}
+@media (max-width: 768px) {
+  .section__title h2 {
+    letter-spacing: normal;
+  }
+
+  /* hero section  */
+  .hero__container {
+    flex-direction: column;
+  }
+
+  .hero__slider--left {
+    width: 100%;
+    height: inherit;
+    padding: 45px;
+  }
+
+  .hero__discription p {
+    line-height: 22px;
+  }
+
+  .hero__slider--left .user__btn {
+    justify-content: flex-start;
+    gap: 45px;
+    margin-top: 50px;
+  }
+
+  .hero__slider--right {
+    width: 100%;
+    height: auto;
+  }
+
+  .hero__slider--right .hero__right--badge {
+    width: 85px;
+    height: 85px;
+    top: 25px;
+    left: 25px;
+  }
+
+  /* resipes section  */
+
+  .resipes__cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .section__discription {
+    width: 100%;
+    padding-inline: 40px;
+  }
+
+  .single__cart--resipe h3 {
+    font-size: 1.3rem;
+  }
+
+  /* learn more section  */
+
+  .learn__more--container {
+    flex-direction: column;
+  }
+
+  .learn__left {
+    width: 100%;
+    text-align: center;
+  }
+
+  .learn__section--title {
+    margin-bottom: 23px;
+  }
+
+  .learn__right {
+    width: 427px;
+  }
+
+  .learn__right .img__chef {
+    width: 403px;
+  }
+
+  /* instagram section  */
+  .instagram__wrapper {
+    margin-bottom: 80px;
+  }
+
+  /* more resipes section  */
+
+  .more__resipes-title {
+    flex-direction: column;
+  }
+
+  .more__resipes-title .section__title {
+    text-align: center;
+    padding: 0 65px;
+  }
+
+  .more__resipes-discription p {
+    width: 100%;
+    text-align: center;
+  }
+
+  .more__resipes-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .more__single--cart h3 {
+    font-size: 0.9375rem;
+  }
+
+  /* subscribe section  */
+  .subscribe__wrapper {
+    margin-bottom: 40px;
+  }
+
+  .subscribe__wrapper--container {
+    border-radius: 30px;
+  }
+
+  .subscribe__wrapper--container {
+    padding: 27px 0;
+  }
+
+  .subscribe__title {
+    margin-bottom: 17px;
+  }
+
+  .subscribe__title .section__title {
+    margin-bottom: 14px;
+  }
+
+  .subscribe__title .section__discription {
+    width: 100%;
+  }
+
+  .subscribe__title .section__discription p {
+    font-size: 0.75rem;
+  }
+
+  .subscribe__input {
+    width: 267px;
+  }
+
+  .subscribe__input input {
+    border-radius: 14px;
+    padding: 13px;
+  }
+
+  .subscribe__input .subscribe__btn {
+    top: 5px;
+    right: 5px;
+    padding: 8px 18px;
+  }
+
+  .subscribe__bg--left {
+    width: 125px;
+  }
+
+  .subscribe__bg--right {
+    width: 117px;
+  }
+
+  /* footer section  */
+  .footer__menu {
+    flex-direction: column-reverse;
+    align-items: start;
+  }
+
+  .navber__list--footer {
+    flex-direction: column;
+    gap: 21px;
+  }
+
+  .footer__social {
+    text-align: start;
+    margin: 30px 0;
+  }
+
+  .footer__social p {
+    font-size: 1rem;
+  }
+
+  .socile__icon {
+    gap: 27px;
+  }
+}
 
 /* mobile devise  */
-@media (max-width: 480px) {}
+@media (max-width: 480px) {
+
+  /* hero section  */
+  .hero__slider--left {
+    padding: 29px 20px;
+  }
+
+  .hero__slider--left .user__btn {
+    gap: 15px;
+    margin-top: 50px;
+  }
+
+  .hero__slider--right .hero__right--badge {
+    width: 65px;
+    height: 65px;
+    top: 12px;
+    left: 12px;
+  }
+
+  /* categories section  */
+  .categories__title {
+    flex-direction: column;
+    gap: 23px;
+  }
+
+  /* resipes section  */
+  .section__discription {
+    padding-inline: 12px;
+  }
+
+  .resipes__cards {
+    grid-template-columns: repeat(1, 1fr);
+
+  }
+
+  .single__cart--resipe h3 {
+    font-size: 1rem;
+  }
+
+  /* learn more section  */
+  .learn__right {
+    width: 345px;
+  }
+
+  .learn__right .img__chef {
+    width: 334px;
+  }
+
+  .learn__right .img__onion {
+    top: 57px;
+    right: 82px;
+  }
+
+  /* instagram section  */
+  .instagram__posts {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  /* more resipes section  */
+  .more__resipes-title .section__title {
+    text-align: center;
+    padding: 0px 45px;
+  }
+
+  .more__resipes-cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  /* subscribe section  */
+  .subscribe__wrapper--container {
+    border-radius: 30px;
+  }
+
+  .subscribe__title .section__discription p {
+    line-height: 17px;
+  }
+
+  .subscribe__bg--left {
+    display: none;
+  }
+
+  .subscribe__bg--right {
+    display: none;
+  }
+
+  /* footer section  */
+  .footer__social {
+    padding-top: 25px;
+  }
+
+  .footer__social--icon {
+    align-items: normal;
+    top: -10px;
+    left: 0;
+  }
+}

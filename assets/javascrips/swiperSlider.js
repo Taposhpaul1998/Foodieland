@@ -27,10 +27,13 @@ const categoriesCartsSlider = new Swiper(".categories__carts--slider", {
             slidesPerView: 5,
         },
         768: {
+            slidesPerView: 4,
+        },
+        685: {
             slidesPerView: 3,
         },
         480: {
-            slidesPerView: 1,
+            slidesPerView: 2,
         },
     },
 })
