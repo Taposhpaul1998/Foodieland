@@ -149,6 +149,14 @@ li {
   gap: 24px;
 }
 
+.single__cart .single__cart--img {
+  transition: .3s ease;
+}
+
+.single__cart:hover .single__cart--img {
+  transform: scale(1.05);
+}
+
 .single__cart .circle {
   width: 48px;
   position: absolute;
