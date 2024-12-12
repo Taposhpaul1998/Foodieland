@@ -1,0 +1,222 @@
+:root {
+    /* text font  */
+    --var--inter: "Inter", sans-serif;
+    --var--lobster: "Lobster", serif;
+    /* color  */
+    --var--text-black: #000000;
+    --var--text-2: rgba(0, 0, 0, 0.6);
+    --var--bg-1: #E7FAFE;
+    --var--bg-2: rgba(0, 0, 0, 0.05);
+}
+
+
+.blog__wrapper {
+    margin-top: 80px;
+    margin-bottom: 160px;
+}
+
+.blog__header {
+    text-align: center;
+}
+
+.blog__section__discription {
+    margin-top: 24px;
+}
+
+.search__input {
+    width: 700px;
+    margin: 80px auto;
+    position: relative;
+}
+
+.search__input .search__input--fild {
+    width: 100%;
+    font-family: 0.875rem;
+    font-family: var(--var--inter);
+    font-weight: 500;
+    line-height: auto;
+    letter-spacing: -0.3px;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 24px;
+    padding: 31px 32px 32px 32px;
+}
+
+.search__input .search__btn {
+    padding: 21px 57px 22px 57px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.blog__container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+}
+
+.blogs__list {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.single__blog {
+    gap: 40px;
+}
+
+.blog__img {
+    width: 290px;
+}
+
+.blog__img img {
+    min-width: 100%;
+    border-radius: 20px;
+}
+
+.blog__info {
+    padding: 13px 0 14px 0;
+}
+
+.blog__info h3 {
+    font-size: 1.5rem;
+    font-family: var(--var--inter);
+    font-weight: 600;
+    letter-spacing: -1.0px;
+    color: var(--var--text-black);
+    margin-bottom: 16px;
+}
+
+.blog__info p {
+    font-size: 1rem;
+    font-family: var(--var--inter);
+    font-weight: 400;
+    line-height: 28px;
+    color: var(--var--text-2);
+    margin-bottom: 32px;
+}
+
+.Blog__writer-date {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.Blog__writer-date .writer {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding-right: 24px;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.Blog__writer-date .writer img {
+    width: 40px;
+    height: 40px;
+}
+
+.Blog__writer-date .writer h6 {
+    font-size: 1rem;
+    font-family: var(--var--inter);
+    font-weight: 700;
+    letter-spacing: -0.3px;
+    color: var(--var--text-black);
+}
+
+.Blog__writer-date .date {
+    padding-left: 24px;
+}
+
+.Blog__writer-date .date span {
+    font-size: 0.875rem;
+    font-family: var(--var--inter);
+    font-weight: 500;
+    letter-spacing: -0.3px;
+    color: var(--var--text-2);
+}
+
+.blog__resipes-title {
+    margin-bottom: 32px;
+}
+
+.blog__resipes-title h3 {
+    font-size: 2rem;
+    font-family: var(--var--inter);
+    font-weight: 600;
+    letter-spacing: -1.3px;
+    color: var(--var--text-black);
+}
+
+.blog__resipes-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 80px;
+}
+
+.single__recipe {
+    gap: 24px;
+}
+
+.recipe__img {
+    width: 180px;
+}
+
+.recipe__img img {
+    min-width: 100%;
+    border-radius: 20px;
+}
+
+.recipe__info h4 {
+    font-size: 1.25rem;
+    font-family: var(--var--inter);
+    font-weight: 600;
+    line-height: 28px;
+    letter-spacing: -0.8px;
+    color: var(--var--text-black);
+    margin-bottom: 16px;
+}
+
+.recipe__info span {
+    font-size: 0.875rem;
+    font-family: var(--var--inter);
+    font-weight: 500;
+    letter-spacing: -0.3px;
+    color: var(--var--text-2);
+}
+
+.blog__paginetion {
+    margin-top: 80px;
+}
+
+.blog__paginetion .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.blog__paginetion .pagination .page-item a {
+    font-size: 1.125rem;
+    font-family: var(--var--inter);
+    font-weight: 700;
+    letter-spacing: -0.4px;
+    color: var(--var--text-black);
+    background: #FFFFFF;
+    padding: 22px 26px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    transition: .3s ease;
+}
+
+.blog__paginetion .pagination .page-item a:hover {
+    background: var(--var--text-black);
+    color: #FFFFFF;
+    border: 1px solid var(--var--text-black);
+}
+
+.blog__paginetion .pagination .page-item .active {
+    background: var(--var--text-black);
+    color: #FFFFFF;
+    border: 1px solid var(--var--text-black);
+}
