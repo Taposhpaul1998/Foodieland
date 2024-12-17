@@ -1,0 +1,110 @@
+.resipies__section-wrapper {
+    padding-top: 80px;
+    padding-bottom: 160px;
+}
+
+.resipes__header {
+    text-align: center;
+}
+
+.resipew__section__discription {
+    margin-top: 24px;
+}
+
+
+.search__input {
+    width: 700px;
+    margin: 80px auto;
+    position: relative;
+}
+
+.search__input .search__input--fild {
+    width: 100%;
+    font-family: 0.875rem;
+    font-family: var(--var--inter);
+    font-weight: 500;
+    line-height: auto;
+    letter-spacing: -0.3px;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 24px;
+    padding: 31px 32px 32px 32px;
+}
+
+.search__input .search__btn {
+    padding: 21px 57px 22px 57px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.blog__paginetion {
+    margin-top: 80px;
+}
+
+.blog__paginetion .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.blog__paginetion .pagination .page-item a {
+    font-size: 1.125rem;
+    font-family: var(--var--inter);
+    font-weight: 700;
+    letter-spacing: -0.4px;
+    color: var(--var--text-black);
+    background: #FFFFFF;
+    padding: 21px 26px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    transition: .3s ease;
+}
+
+.blog__paginetion .pagination .page-item a:hover {
+    background: var(--var--text-black);
+    color: #FFFFFF;
+    border: 1px solid var(--var--text-black);
+}
+
+.blog__paginetion .pagination .page-item .active {
+    background: var(--var--text-black);
+    color: #FFFFFF;
+    border: 1px solid var(--var--text-black);
+}
+
+@media (max-width: 768px) {
+    .search__input {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .blog__container {
+        padding-inline: 12px;
+    }
+
+    .search__input {
+        width: 304px;
+    }
+
+    .search__input .search__input--fild {
+        padding: 18px;
+    }
+
+    .search__input .search__btn {
+        padding: 11px 21px;
+        top: 9px;
+        right: 9px;
+    }
+
+    .blog__paginetion .pagination {
+        gap: 7px;
+    }
+
+    .blog__paginetion .pagination .page-item a {
+        font-size: 0.875rem;
+        padding: 11px 14px;
+    }
+}

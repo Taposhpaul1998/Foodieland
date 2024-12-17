@@ -248,7 +248,7 @@ li {
   position: relative;
 }
 
-.navber__list li a {
+.navber__list li .nav__link {
   font-size: 1rem;
   font-family: var(--var--inter);
   font-weight: 500;
@@ -264,11 +264,11 @@ li {
 }
 
 
-.navber__list li a:hover {
+.navber__list li .nav__link:hover {
   color: #FF7426;
 }
 
-.navber__list li a::after {
+.navber__list li .nav__link::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -281,7 +281,7 @@ li {
   transition: .3s ease;
 }
 
-.navber__list li a:hover::after {
+.navber__list li .nav__link:hover::after {
   transform: scale(1, 1);
 }
 

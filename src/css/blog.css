@@ -62,6 +62,9 @@
 }
 
 .single__blog {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
     gap: 40px;
 }
 
@@ -154,6 +157,12 @@
     margin-bottom: 80px;
 }
 
+.blog__single--resipe {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
 .single__recipe {
     gap: 24px;
 }
@@ -203,7 +212,7 @@
     letter-spacing: -0.4px;
     color: var(--var--text-black);
     background: #FFFFFF;
-    padding: 22px 26px;
+    padding: 21px 26px;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 16px;
     transition: .3s ease;
@@ -219,4 +228,109 @@
     background: var(--var--text-black);
     color: #FFFFFF;
     border: 1px solid var(--var--text-black);
+}
+
+/* contact resposive  */
+@media (max-width: 1200px) {
+
+    /* blog__container  */
+    .blog__container {
+        gap: 30px;
+    }
+
+    .single__blog {
+        gap: 30px;
+    }
+
+    .single__blog {
+        gap: 30px;
+    }
+
+    .blog__info {
+        padding: 0px;
+    }
+
+    .blog__info h3 {
+        font-size: 1.375rem;
+        margin-bottom: 10px;
+    }
+
+    .blog__info p {
+        font-size: 0.875rem;
+        line-height: 22px;
+        margin-bottom: 18px;
+    }
+
+    .Blog__writer-date .writer {
+        gap: 12px;
+        padding-right: 17px;
+    }
+
+    .Blog__writer-date .writer h6 {
+        font-size: 0.875rem;
+    }
+
+    .Blog__writer-date .date {
+        padding-left: 17px;
+    }
+
+    .recipe__info h4 {
+        font-size: 1rem;
+        margin-bottom: 13px;
+    }
+}
+
+@media (max-width: 980px) {
+    .blog__container {
+        grid-template-columns: 1fr;
+        padding-inline: 40px;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .search__input {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .blog__container {
+        padding-inline: 12px;
+    }
+
+    .search__input {
+        width: 304px;
+    }
+
+    .search__input .search__input--fild {
+        padding: 18px;
+    }
+
+    .search__input .search__btn {
+        padding: 11px 21px;
+        top: 9px;
+        right: 9px;
+    }
+
+    .single__blog {
+        flex-direction: column;
+    }
+
+    .blog__single--resipe {
+        flex-direction: column;
+    }
+
+    .recipe__img {
+        width: 280px;
+    }
+
+    .blog__paginetion .pagination {
+        gap: 7px;
+    }
+
+    .blog__paginetion .pagination .page-item a {
+        font-size: 0.875rem;
+        padding: 11px 14px;
+    }
 }

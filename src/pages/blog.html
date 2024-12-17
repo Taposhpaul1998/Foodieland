@@ -15,36 +15,8 @@
 
 <body>
     <!-- header section start  -->
-    <section class="header__wrapper ">
-        <div class="container header__continer">
-            <a href="/">
-                <h4 class="logo">Foodieland<span>.</span></h4>
-            </a>
-            <div class="navber">
-                <ul class="flex navber__list">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="/src/pages/resipes.html">Recipes</a></li>
-                    <li><a href="/src/pages/blog.html">Blog</a></li>
-                    <li><a href="/src/pages/contact.html">Contact</a></li>
-                    <li><a class="navber__list--active" href="/src/pages/about.html">About us</a></li>
-                </ul>
-                <ul class="socile__icon flex">
-                    <li><a href="https://www.facebook.com"><i class="fa-brands fa-facebook-f"></i></a></li>
-                    <li><a href="https://www.twitter.com"><i class="fa-brands fa-twitter"></i></a></li>
-                    <li><a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a></li>
-                </ul>
-                <div class="xmark__icon">
-                    <i class="fa-solid fa-xmark"></i>
-                </div>
-            </div>
-            <ul class="socile__icon-mobile flex">
-                <li><a href="https://www.facebook.com"><i class="fa-brands fa-facebook-f"></i></a></li>
-                <li><a href="https://www.twitter.com"><i class="fa-brands fa-twitter"></i></a></li>
-                <li><a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a></li>
-                <li class="bar__icon"><i class="fa-solid fa-bars"></i></li>
-            </ul>
+    <section id="header" class="header__wrapper ">
 
-        </div>
     </section>
     <!-- header section end  -->
     <section class="blog__wrapper">
@@ -65,7 +37,7 @@
             </div>
             <div class="blog__container">
                 <div class="blogs__list">
-                    <div class="single__blog flex">
+                    <div class="single__blog">
                         <div class="blog__img">
                             <img src="../../assets/images/blog__img/blog-img 1.png" alt="">
                         </div>
@@ -84,7 +56,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="single__blog flex">
+                    <div class="single__blog">
                         <div class="blog__img">
                             <img src="../../assets/images/blog__img/blog-img 2.png" alt="">
                         </div>
@@ -103,7 +75,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="single__blog flex">
+                    <div class="single__blog">
                         <div class="blog__img">
                             <img src="../../assets/images/blog__img/blog-img 3.png" alt="">
                         </div>
@@ -122,7 +94,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="single__blog flex">
+                    <div class="single__blog">
                         <div class="blog__img">
                             <img src="../../assets/images/blog__img/blog-img 4.png" alt="">
                         </div>
@@ -141,7 +113,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="single__blog flex">
+                    <div class="single__blog">
                         <div class="blog__img">
                             <img src="../../assets/images/blog__img/blog-img 5.png" alt="">
                         </div>
@@ -160,7 +132,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="single__blog flex">
+                    <div class="single__blog">
                         <div class="blog__img">
                             <img src="../../assets/images/blog__img/blog-img 6.png" alt="">
                         </div>
@@ -185,7 +157,7 @@
                         <h3>Tasty Recipes</h3>
                     </div>
                     <div class="blog__resipes-list">
-                        <div class="single__recipe flex">
+                        <div class="single__recipe blog__single--resipe">
                             <div class="recipe__img">
                                 <img src="../../assets/images/blog__img/blog-resipes-img 1.png" alt="">
                             </div>
@@ -194,7 +166,7 @@
                                 <span>By Andreas Paula</span>
                             </div>
                         </div>
-                        <div class="single__recipe flex">
+                        <div class="single__recipe blog__single--resipe">
                             <div class="recipe__img">
                                 <img src="../../assets/images/blog__img/blog-resipes-img 2.png" alt="">
                             </div>
@@ -203,7 +175,7 @@
                                 <span>By Andreas Paula</span>
                             </div>
                         </div>
-                        <div class="single__recipe flex">
+                        <div class="single__recipe blog__single--resipe">
                             <div class="recipe__img">
                                 <img src="../../assets/images/blog__img/blog-resipes-img 3.png" alt="">
                             </div>
@@ -225,6 +197,7 @@
                     <li class="page-item "><a href="#">3</a></li>
                     <li class="page-item"><a href="#">4</a></li>
                     <li class="page-item"><a href="#">5</a></li>
+                    <li class="page-item"><a href="#">...</a></li>
                     <li class="page-item">
                         <a href="#" aria-label="Next">
                             <svg width="5" height="14" viewBox="0 0 5 14" fill="none"
@@ -241,59 +214,11 @@
     </section>
 
     <!-- Subscribe card start -->
-    <section class="subscribe__wrapper">
-        <div class="container subscribe__wrapper--container">
-            <div class="subscribe__title ">
-                <div class="section__title">
-                    <h2>Deliciousness to your inbox</h2>
-                </div>
-                <div class="section__discription">
-                    <p>Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore
-                        et
-                        dolore magna aliqut enim ad minim </p>
-                </div>
-            </div>
-            <div class="subscribe__input">
-                <input type="email " placeholder="Your email address...">
-                <button class="btn subscribe__btn ">Subscribe</button>
-            </div>
-            <img class="subscribe__bg--left"
-                src="../../assets/images/home-image/kisspng-salad-salad-fresh-food-healthylife-vegetables-vegetarian-5d42e3a7cb8543 1.png"
-                alt="">
-            <img class="subscribe__bg--right" src="../../assets/images/home-image/Photo-subscribe-bg.png" alt="">
-        </div>
+    <section id="subscribe" class="subscribe__wrapper">
     </section>
     <!-- Subscribe card end -->
     <!-- footer section start  -->
-    <section class="footer__wrapper">
-        <div class="container">
-            <div class="footer__menu flex">
-                <div class="lego__text">
-                    <a href="/">
-                        <h4 class="logo">Foodieland<span>.</span></h4>
-                    </a>
-                    <p>Lorem ipsum dolor sit amet, consectetuipisicing elit, </p>
-                </div>
-                <ul class="navber__list navber__list--footer flex ">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/src/pages/resipes.html">Resipes</a></li>
-                    <li><a href="/src/pages/blog.html">Blog</a></li>
-                    <li><a href="/src/pages/contact.html">Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer__social">
-                <p>&copy; 2020 Flowbase. Powered by <span>Webflow</span></p>
-                <ul class="socile__icon footer__social--icon">
-                    <li><a href="https://www.facebook.com"><i class="fa-brands fa-facebook-f"></i></a></li>
-                    <li><a href="https://www.twitter.com"><i class="fa-brands fa-twitter"></i></a></li>
-                    <li><a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a></li>
-                </ul>
-            </div>
-        </div>
-        <!-- scrall up button  -->
-        <div class="scrollup__btn">
-            <i class="fa-solid fa-angle-up"></i>
-        </div>
+    <section id="footer" class="footer__wrapper">
     </section>
     <!-- footer section end  -->
     <!-- javascript  -->
