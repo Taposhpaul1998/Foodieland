@@ -17,7 +17,11 @@ const loadComponent = async (id, file) => {
     // Add active class to the current link
     links.forEach(link => {
         const href = link.getAttribute("href")
+
         if (href === currentPath) {
+            link.classList.add("navber__list--active")
+        }
+        else if (currentPath === "/src/pages/resipeDetails.html" && href === "/src/pages/resipes.html") {
             link.classList.add("navber__list--active")
         }
 
@@ -76,4 +80,12 @@ loadComponent("subscribe", "/src/components/subcription.html")
 loadComponent("check", "/src/components/checkResipes.html")
 loadComponent("footer", "/src/components/footer.html")
 
-// header  navbar handle 
+// heandle resipes cart click to navigate resipes details page
+
+const resipes = document.querySelectorAll(".single__cart")
+
+resipes.forEach(resipe => {
+    resipe.addEventListener("click", () => {
+        window.location.href = "/src/pages/resipeDetails.html"
+    })
+})

@@ -1,0 +1,15 @@
+:root {
+    /* text font  */
+    --var--inter: "Inter", sans-serif;
+    --var--lobster: "Lobster", serif;
+    /* color  */
+    --var--text-black: #000000;
+    --var--text-2: rgba(0, 0, 0, 0.6);
+    --var--bg-1: #E7FAFE;
+    --var--bg-2: rgba(0, 0, 0, 0.05);
+}
+
+.resipe__details--wrapper {
+    margin-top: 80px;
+    margin-bottom: 160px;
+}

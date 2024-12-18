@@ -400,15 +400,15 @@ li {
   color: var(--var--text-2);
 }
 
-.hero__slider--left .user__btn {
+.hero__slider--left .shape__btn {
   margin-top: 99px;
 }
 
-.hero__slider--left .user__btn .user {
+.hero__slider--left .shape__btn .shape {
   gap: 16px;
 }
 
-.hero__slider--left .user__btn .user h6 {
+.hero__slider--left .shape__btn .shape h6 {
   font-size: 1rem;
   font-family: var(--var--inter);
   font-weight: 700;
@@ -417,7 +417,7 @@ li {
   margin-bottom: 8px;
 }
 
-.hero__slider--left .user__btn .user span {
+.hero__slider--left .shape__btn .shape span {
   font-size: 0.875rem;
   font-family: var(--var--inter);
   font-weight: 500;
@@ -425,7 +425,7 @@ li {
   color: var(--var--text-2);
 }
 
-.hero__slider--left .user__btn .view__resipe {
+.hero__slider--left .shape__btn .view__resipe {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1255,19 +1255,19 @@ li {
     padding: 29px;
   }
 
-  .hero__slider--left .user__btn {
+  .hero__slider--left .shape__btn {
     margin-top: 57px;
   }
 
-  .hero__slider--left .user__btn .user h6 {
+  .hero__slider--left .shape__btn .shape h6 {
     font-size: 13px;
   }
 
-  .hero__slider--left .user__btn .user span {
+  .hero__slider--left .shape__btn .shape span {
     font-size: 13px;
   }
 
-  .hero__slider--left .user__btn .view__resipe {
+  .hero__slider--left .shape__btn .view__resipe {
     padding: 13px 20px;
   }
 
@@ -1452,7 +1452,7 @@ li {
     line-height: 22px;
   }
 
-  .hero__slider--left .user__btn {
+  .hero__slider--left .shape__btn {
     justify-content: flex-start;
     gap: 45px;
     margin-top: 50px;
@@ -1622,7 +1622,7 @@ li {
     padding: 29px 20px;
   }
 
-  .hero__slider--left .user__btn {
+  .hero__slider--left .shape__btn {
     gap: 15px;
     margin-top: 50px;
   }
