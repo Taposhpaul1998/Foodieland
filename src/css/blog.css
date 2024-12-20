@@ -50,12 +50,13 @@
 }
 
 .blog__container {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
+    display: flex;
+    justify-content: space-between;
     gap: 40px;
 }
 
 .blogs__list {
+    width: 840px;
     display: flex;
     flex-direction: column;
     gap: 32px;
@@ -138,61 +139,7 @@
     color: var(--var--text-2);
 }
 
-.blog__resipes-title {
-    margin-bottom: 32px;
-}
 
-.blog__resipes-title h3 {
-    font-size: 2rem;
-    font-family: var(--var--inter);
-    font-weight: 600;
-    letter-spacing: -1.3px;
-    color: var(--var--text-black);
-}
-
-.blog__resipes-list {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    margin-bottom: 80px;
-}
-
-.blog__single--resipe {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-.single__recipe {
-    gap: 24px;
-}
-
-.recipe__img {
-    width: 180px;
-}
-
-.recipe__img img {
-    min-width: 100%;
-    border-radius: 20px;
-}
-
-.recipe__info h4 {
-    font-size: 1.25rem;
-    font-family: var(--var--inter);
-    font-weight: 600;
-    line-height: 28px;
-    letter-spacing: -0.8px;
-    color: var(--var--text-black);
-    margin-bottom: 16px;
-}
-
-.recipe__info span {
-    font-size: 0.875rem;
-    font-family: var(--var--inter);
-    font-weight: 500;
-    letter-spacing: -0.3px;
-    color: var(--var--text-2);
-}
 
 .blog__paginetion {
     margin-top: 80px;
