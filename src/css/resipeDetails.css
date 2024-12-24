@@ -184,7 +184,69 @@
     gap: 40px;
 }
 
-.ingredients__coking {
+.ingredients__cooking {
     width: 840px;
     margin-bottom: 88px;
+}
+
+.ingredients__wrapper {
+    margin-bottom: 88px;
+}
+
+.cooking__title {
+    font-size: 2.25rem;
+    font-family: var(--var--inter);
+    font-weight: 600;
+    letter-spacing: -1.4px;
+    color: var(--var--text-black);
+    margin-bottom: 48px;
+}
+
+.main__dish {
+    margin-bottom: 64px;
+}
+
+.dish__title {
+    font-size: 1.5rem;
+    font-family: var(--var--inter);
+    font-weight: 600;
+    letter-spacing: -1.0px;
+    color: var(--var--text-black);
+    margin-bottom: 32px;
+}
+
+/* circle icon  */
+.ingredients__cooking i {
+    font-size: 1.5rem;
+    color: #DBE2E5;
+    margin-right: 24px;
+}
+
+.ingredients__wrapper ul {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.ingredients__wrapper ul li {
+    padding-bottom: 32px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+
+.ingredients__wrapper ul .checked i {
+    color: var(--var--text-black);
+}
+
+.ingredients__wrapper ul li label {
+    font-size: 1rem;
+    font-family: var(--var--inter);
+    font-weight: 400;
+    line-height: 28px;
+    color: var(--var--text-black);
+}
+
+.ingredients__wrapper ul .checked label {
+    text-decoration: line-through;
+    color: var(--var--text-2);
 }
