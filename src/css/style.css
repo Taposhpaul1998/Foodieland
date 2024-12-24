@@ -213,7 +213,7 @@ li {
 }
 
 .suggest__resipes-title h3 {
-  font-size: 2rem;
+  font-size: clamp(1.625rem, 1.4rem + 0.75vw, 2rem);
   font-family: var(--var--inter);
   font-weight: 600;
   letter-spacing: -1.3px;
@@ -1783,4 +1783,10 @@ li {
   .check__out-cards {
     grid-template-columns: 1fr;
   }
+
+  /* suggest resipes section */
+  .suggest__resipes {
+    width: 100%;
+  }
+
 }

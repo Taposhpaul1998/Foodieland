@@ -120,6 +120,7 @@
 }
 
 .resipe__info {
+    width: 400px;
     padding: 32px;
     background: var(--var--bg-1);
     border-radius: 30px;
@@ -167,7 +168,7 @@
     line-height: 24px;
     text-align: center;
     color: var(--var--text-2);
-
+    margin-inline: auto;
 }
 
 .resipe__description p {
@@ -186,15 +187,14 @@
 
 .ingredients__cooking {
     width: 840px;
-    margin-bottom: 88px;
 }
 
 .ingredients__wrapper {
     margin-bottom: 88px;
 }
 
-.cooking__title {
-    font-size: 2.25rem;
+.cooking__title h3 {
+    font-size: clamp(1.875rem, 1.65rem + 0.75vw, 2.25rem);
     font-family: var(--var--inter);
     font-weight: 600;
     letter-spacing: -1.4px;
@@ -220,7 +220,7 @@
 
 /* circle icon  */
 .ingredients__cooking i {
-    font-size: 1.5rem;
+    font-size: clamp(1.125rem, 0.9rem + 0.75vw, 1.5rem);
     color: #DBE2E5;
     margin-right: 24px;
 }
@@ -260,7 +260,6 @@
 
 .single__direction ul li {
     display: flex;
-    gap: 24px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     padding-bottom: 48px;
     margin-bottom: 48px;
@@ -271,7 +270,7 @@
 }
 
 .direction__text h4 {
-    font-size: 1.5rem;
+    font-size: clamp(1.125rem, 0.9rem + 0.75vw, 1.5rem);
     font-family: var(--var--inter);
     font-weight: 600;
     letter-spacing: -0.5px;
@@ -291,4 +290,63 @@
 .direction__text img {
     width: 100%;
     margin: 48px 0;
+}
+
+
+/* resposive design */
+
+@media (max-width: 980px) {
+
+    .details__head {
+        flex-direction: column;
+        gap: 20px;
+        margin-bottom: 60px;
+    }
+
+    .recipe__info {
+        margin-bottom: 42px;
+    }
+
+    .video__info {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .resipe__video {
+        width: 100%;
+        height: auto;
+    }
+
+    .resipe__info {
+        width: 100%;
+    }
+
+    .resipe__details--body {
+        flex-direction: column-reverse;
+        gap: 40px;
+    }
+
+    .ingredients__cooking {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .recipe__info {
+        flex-wrap: wrap;
+        justify-content: center;
+        row-gap: 60px;
+    }
+
+    .single__direction ul li i {
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .resipe__info p {
+        width: 100%;
+    }
 }
