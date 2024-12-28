@@ -68,9 +68,8 @@
 
 .blog__details--body {
     display: flex;
-    justify-content: space-between;
-    gap: 49px;
-    margin: 0 111px 0 70px;
+    justify-content: center;
+    gap: 48px;
 }
 
 .blog__description {
@@ -160,4 +159,78 @@
     flex-direction: column;
     gap: 48px;
     margin-top: 32px;
+}
+
+/* resposive design */
+
+@media (max-width: 1200px) {
+    .blog__details--body {
+        flex-direction: column-reverse;
+        gap: 48px;
+    }
+
+    .blog__sosail--links {
+        width: fit-content;
+        display: flex;
+        justify-content: flex-start;
+        gap: 30px;
+        margin-left: 40px;
+    }
+
+    .blog__sosail--links .socile__icon {
+        flex-direction: row;
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 980px) {
+    .blog__details--wrapper {
+        margin-top: 40px;
+        margin-bottom: 60px;
+    }
+
+    .blog__details--header {
+        margin-bottom: 40px;
+    }
+
+
+    .shape__discription {
+        width: 100%;
+    }
+
+    .blog__details--body {
+        gap: 32px;
+    }
+
+    .blog__description {
+        width: 100%;
+    }
+
+    .blog__direction--text {
+        margin-bottom: 35px;
+    }
+
+    .blog__direction--text--third img {
+        width: 100%;
+    }
+
+    .blog__add {
+        margin-bottom: 35px;
+    }
+}
+
+@media (max-width: 480px) {
+    .blog__shape {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .blog__sosail--links {
+        margin-left: 0;
+    }
+
+    .blog__direction--text {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 }
