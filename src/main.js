@@ -21,7 +21,10 @@ const loadComponent = async (id, file) => {
         if (href === currentPath) {
             link.classList.add("navber__list--active")
         }
-        else if (currentPath === "/src/pages/resipeDetails.html" && href === "/src/pages/resipes.html") {
+        else if (currentPath === "/src/pages/resipeDetails" && href === "/src/pages/resipes") {
+            link.classList.add("navber__list--active")
+        }
+        else if (currentPath === "/src/pages/blogDetails" && href === "/src/pages/blog") {
             link.classList.add("navber__list--active")
         }
 
@@ -86,6 +89,15 @@ const resipes = document.querySelectorAll(".single__cart")
 
 resipes.forEach(resipe => {
     resipe.addEventListener("click", () => {
-        window.location.href = "/src/pages/resipeDetails.html"
+        window.location.href = "/src/pages/resipeDetails"
+    })
+})
+
+
+const blog = document.querySelectorAll(".single__blog")
+
+blog.forEach(blogPost => {
+    blogPost.addEventListener("click", () => {
+        window.location.href = "/src/pages/blogDetails"
     })
 })
