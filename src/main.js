@@ -1,3 +1,7 @@
+import products from "../data/products.json";
+import "./javascrips/home/testyResipes.js";
+import "./javascrips/resipes/resipes.js";
+import "./javascrips/resipes/resipeDetails.js";
 
 // Load component function
 
@@ -38,9 +42,11 @@ const loadComponent = async (id, file) => {
 
 
 
-    barIcon.addEventListener("click", () => {
-        navBer.classList.add("navber--open");
-    });
+    if (barIcon) {
+        barIcon.addEventListener("click", () => {
+            navBer.classList.add("navber--open");
+        });
+    }
 
     xmarkIcon.addEventListener("click", () => {
         navBer.classList.remove("navber--open");
@@ -50,30 +56,56 @@ const loadComponent = async (id, file) => {
 
     const scrollUpBtn = document.querySelector(".scrollup__btn");
 
-    window.addEventListener("scroll", () => {
-        const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        const scrollPosition = document.documentElement.scrollTop;
+    if (scrollUpBtn) {
+        window.addEventListener("scroll", () => {
+            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrollPosition = document.documentElement.scrollTop;
 
-        // Calculate scroll percentage
-        const scrollPercent = Math.round((scrollPosition / scrollHeight) * 100)
+            // Calculate scroll percentage
+            const scrollPercent = Math.round((scrollPosition / scrollHeight) * 100)
 
-        // Show or hide scroll up button
-        if (scrollPosition > 200) {
-            scrollUpBtn.classList.add("visible");
-        } else {
-            scrollUpBtn.classList.remove("visible");
-        }
-        scrollUpBtn.style.background = `conic-gradient(#ff5200fa ${scrollPercent}%, #d7d7d7 ${scrollPercent}%)`;
+            // Show or hide scroll up button
+            if (scrollPosition > 200) {
+                scrollUpBtn.classList.add("visible");
+            } else {
+                scrollUpBtn.classList.remove("visible");
+            }
+            scrollUpBtn.style.background = `conic-gradient(#ff5200fa ${scrollPercent}%, #d7d7d7 ${scrollPercent}%)`;
 
-    });
-
-    // smooth scroll 
-
-    scrollUpBtn.addEventListener("click", () => {
-        document.documentElement.scrollTo({
-            top: 0,
-            behavior: "smooth",
         });
+
+        // smooth scroll 
+
+        scrollUpBtn.addEventListener("click", () => {
+            document.documentElement.scrollTo({
+                top: 0,
+                behavior: "smooth",
+            });
+        });
+    }
+
+
+    // handle subscribe form
+    const subscribeForm = document.querySelector('#subscribeForm');
+
+    subscribeForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        // toast message 
+        const toastMassage = document.querySelector(".toastMassage");
+
+        const email = subscribeForm.email.value;
+        if (email) {
+            const toast = document.createElement("div");
+            toast.classList.add("toast");
+            toast.textContent = `Your email: ${email}`;
+            toastMassage.innerHTML = `
+            <div class="toast">
+                <p>Your email: ${email}</p>
+            </div>`;
+            // resete form 
+            subscribeForm.reset();
+        }
     });
 
 };
@@ -83,16 +115,9 @@ loadComponent("subscribe", "/src/components/subcription.html")
 loadComponent("check", "/src/components/checkResipes.html")
 loadComponent("footer", "/src/components/footer.html")
 
-// heandle resipes cart click to navigate resipes details page
+// set logcal storage resipes data 
 
-const resipes = document.querySelectorAll(".single__cart")
-
-resipes.forEach(resipe => {
-    resipe.addEventListener("click", () => {
-        window.location.href = "/src/pages/resipeDetails"
-    })
-})
-
+window.localStorage.setItem("resipes", JSON.stringify(products))
 
 const blog = document.querySelectorAll(".single__blog")
 
@@ -101,3 +126,6 @@ blog.forEach(blogPost => {
         window.location.href = "/src/pages/blogDetails"
     })
 })
+
+
+

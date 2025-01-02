@@ -141,7 +141,7 @@ li {
   transition: 0.3s ease;
 }
 
-.single__cart img {
+.single__cart .cart__img {
   width: 100%;
   border-radius: 30px;
 }
@@ -158,11 +158,11 @@ li {
   gap: 24px;
 }
 
-.single__cart .single__cart--img {
+.single__cart .cart__img {
   transition: .3s ease;
 }
 
-.single__cart:hover .single__cart--img {
+.single__cart:hover .cart__img {
   transform: scale(1.05);
 }
 
@@ -269,6 +269,54 @@ li {
   font-weight: 500;
   letter-spacing: -0.3px;
   color: var(--var--text-2);
+}
+
+/* toast message  */
+
+.toast {
+  position: fixed;
+  top: 50px;
+  right: 50px;
+  z-index: 999;
+  padding: 20px;
+  background: #FFFFFF;
+  color: #FF7426;
+  border-radius: 7px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  font-size: 1rem;
+  font-family: var(--var--inter);
+  font-weight: 500;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+.toast::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 5px;
+  background-color: #FF7426;
+  border-radius: 7px;
+  animation: widthAnime 5s linear forwards;
+}
+
+@keyframes widthAnime {
+  100% {
+    width: 0;
+  }
 }
 
 /* header section  */
@@ -396,7 +444,7 @@ li {
 
 /* hero section  */
 .hero__wrapper {
-  padding-top: 40px;
+  margin-top: 40px;
   margin-bottom: 160px;
   display: flex;
   justify-items: center;

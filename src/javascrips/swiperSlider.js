@@ -6,6 +6,11 @@ new Swiper('.hero__slider', {
     speed: 2500,
     autoplay: {
         delay: 2000,
+    },
+    // If we need pagination
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
     }
 
 });
@@ -35,7 +40,8 @@ const categoriesCartsSlider = new Swiper(".categories__carts--slider", {
         480: {
             slidesPerView: 2,
         },
-    },
+    }
+
 })
 
 // Stop autoplay on hover
