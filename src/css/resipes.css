@@ -38,6 +38,38 @@
     right: 10px;
 }
 
+.select__category {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+#category {
+    font-family: var(--var--inter);
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.5;
+    letter-spacing: -0.3px;
+    color: var(--var--text-black);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    padding: 10px 20px;
+    background: #FFFFFF;
+    appearance: none;
+    outline: none;
+}
+
+.count__text {
+    font-family: var(--var--inter);
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.5;
+    letter-spacing: -0.3px;
+    color: var(--var--text-2);
+}
+
 .blog__paginetion {
     margin-top: 80px;
 }

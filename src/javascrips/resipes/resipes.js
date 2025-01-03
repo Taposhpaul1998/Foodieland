@@ -1,33 +1,88 @@
 // get resipes form localStorage 
 
-let resipes = JSON.parse(localStorage.getItem('resipes')) || [];
+let allResipes = JSON.parse(localStorage.getItem('resipes')) || [];
 
 
-// resipes page 
-const resipesContainer = document.querySelector(".resipes__container");
-
-if (resipesContainer) {
-    const resipesCards = document.querySelector(".resipes__cards");
-    const template = document.querySelector("#resipe__template");
-
-    resipes.forEach((resipe) => {
-        const clone = template.content.cloneNode(true);
-        clone.querySelector(".cart__img").src = `../../${resipe.img}`;
-        clone.querySelector(".cart__title").textContent = resipe.title;
-        clone.querySelector(".category").textContent = resipe.category;
-
-        clone.querySelector(".fa-heart").classList.add(resipe.favorite && "favorite__cart");
-
-        clone.querySelector(".single__cart").addEventListener("click", (e) => {
-            console.log(e.target);
+const categorys = [...new Set(allResipes.map(resipe => resipe.category))];
 
 
-            // window.location.href = `/src/pages/resipeDetails?id=${resipe.id}`
+// display resipes 
+
+const displayResipes = (resipes) => {
+
+    // filter resipes count
+    const resipesCount = document.querySelector(".count__text");
+    resipesCount.textContent = resipes.length > 1 ? ` Total resipes: ${resipes.length} ` : `Total resipes: : ${resipes.length
+        }`;
+    // resipes page 
+    const resipesContainer = document.querySelector(".resipes__container");
+
+    if (resipesContainer) {
+        const resipesCards = document.querySelector(".resipes__cards");
+        const template = document.querySelector("#resipe__template");
+        resipesCards.replaceChildren();
+        resipes.forEach((resipe) => {
+            const clone = template.content.cloneNode(true);
+            clone.querySelector(".cart__img").src = `../../${resipe.img}`;
+            clone.querySelector(".cart__title").textContent = resipe.title;
+            clone.querySelector(".category").textContent = resipe.category;
+
+            clone.querySelector(".fa-heart").classList.add(resipe.favorite && "favorite__cart");
+
+            clone.querySelector(".single__cart").addEventListener("click", (e) => {
+                console.log(e.target);
+
+
+                // window.location.href = `/src/pages/resipeDetails?id=${resipe.id}`
+            });
+
+            resipesCards.appendChild(clone);
+        })
+
+    }
+};
+
+displayResipes(allResipes)
+
+// search resipes
+const searchForm = document.querySelector(".search__input");
+
+if (searchForm) {
+    searchForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const searchValue = searchForm.search.value.toLowerCase().trim();
+        const resipes = allResipes.filter(resipe => {
+            return resipe.title.toLowerCase().includes(searchValue) || resipe.category.toLowerCase().includes(searchValue);
         });
 
-        resipesCards.appendChild(clone);
-    })
+        displayResipes(resipes);
+    });
 
 }
+
+// display category
+
+const categoryContainer = document.querySelector("#category");
+
+if (categoryContainer) {
+    categorys.forEach(category => {
+        const option = document.createElement("option");
+        option.value = category;
+        option.textContent = category;
+        categoryContainer.appendChild(option);
+    });
+
+    // filter resipes by category
+    categoryContainer.addEventListener("change", (e) => {
+        if (e.target.value === "") {
+            return displayResipes(allResipes);
+        }
+        const categoryValue = e.target.value;
+        const resipes = allResipes.filter(resipe => resipe.category === categoryValue);
+        displayResipes(resipes);
+
+    });
+}
+
 
 

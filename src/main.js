@@ -91,8 +91,6 @@ const loadComponent = async (id, file) => {
     subscribeForm.addEventListener("submit", (e) => {
         e.preventDefault();
 
-
-
         const email = subscribeForm.email.value;
         if (email) {
             // toast message 
