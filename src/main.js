@@ -2,6 +2,7 @@ import products from "../data/products.json";
 import "./javascrips/home/testyResipes.js";
 import "./javascrips/resipes/resipes.js";
 import "./javascrips/resipes/resipeDetails.js";
+import "./javascrips/contact/contact.js"
 
 // Load component function
 
