@@ -36,7 +36,20 @@ if (homePage) {
 
             clone.querySelector(".fa-heart").classList.add(resipe.favorite && "favorite__cart");
 
-            clone.querySelector(".single__cart").addEventListener("click", () => { window.location.href = `./src/pages/resipeDetails?id=${resipe.id}` });
+            const favoriteCart = clone.querySelector(".fa-heart");
+            clone.querySelector(".single__cart").addEventListener("click", (e) => {
+
+                if (e.target === favoriteCart) {
+
+                    resipe.favorite = !resipe.favorite;
+                    favoriteCart.classList.toggle("favorite__cart");
+                    localStorage.setItem("resipes", JSON.stringify(allResipes));
+
+                }
+                else if (e.target !== favoriteCart) {
+                    window.location.href = `/src/pages/resipeDetails?id=${resipe.id}`
+                }
+            });
 
             resipesCards.appendChild(clone);
         }
