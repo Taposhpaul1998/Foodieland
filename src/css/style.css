@@ -286,16 +286,17 @@ li {
   font-size: 1rem;
   font-family: var(--var--inter);
   font-weight: 500;
+  animation: slideIn .5s linear forwards;
 }
 
 @keyframes slideIn {
   0% {
-    transform: translateY(-100%);
+    transform: translateX(100%);
     opacity: 0;
   }
 
   100% {
-    transform: translateY(0);
+    transform: translateX(0);
     opacity: 1;
   }
 }

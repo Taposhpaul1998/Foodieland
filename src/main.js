@@ -91,18 +91,20 @@ const loadComponent = async (id, file) => {
     subscribeForm.addEventListener("submit", (e) => {
         e.preventDefault();
 
-        // toast message 
-        const toastMassage = document.querySelector(".toastMassage");
+
 
         const email = subscribeForm.email.value;
         if (email) {
+            // toast message 
             const toast = document.createElement("div");
             toast.classList.add("toast");
             toast.textContent = `Your email: ${email}`;
-            toastMassage.innerHTML = `
-            <div class="toast">
-                <p>Your email: ${email}</p>
-            </div>`;
+            document.body.appendChild(toast);
+
+            setTimeout(() => {
+                toast.remove();
+            }, 5000);
+
             // resete form 
             subscribeForm.reset();
         }
