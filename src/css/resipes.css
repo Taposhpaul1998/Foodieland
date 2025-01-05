@@ -61,6 +61,33 @@
     outline: none;
 }
 
+.favorite__btn {
+    font-family: var(--var--inter);
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.5;
+    letter-spacing: -0.3px;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 16px;
+    background: #FF7426;
+    border: 1px solid #FF7426;
+    transition: .3s ease;
+}
+
+.favorite-active {
+    color: #FF6363;
+    background: #FFFFFF;
+}
+
+.favorite__btn:hover {
+    color: #FF6363;
+    background: #FFFFFF;
+}
+
 .count__text {
     font-family: var(--var--inter);
     font-weight: 500;

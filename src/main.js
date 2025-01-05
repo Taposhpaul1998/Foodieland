@@ -1,15 +1,19 @@
-import products from "../data/products.json";
+import "./javascrips/setDataLocalStorage.js"
 import "./javascrips/home/testyResipes.js";
 import "./javascrips/resipes/resipes.js";
-import "./javascrips/resipes/resipeDetails.js";
+import "./javascrips/blog/blog.js"
 import "./javascrips/contact/contact.js"
+
 
 // Load component function
 
 const loadComponent = async (id, file) => {
     const response = await fetch(file);
     const content = await response.text();
-    document.getElementById(id).innerHTML = content;
+    const element = document.getElementById(id)
+    if (element) {
+        element.innerHTML = content
+    }
 
     // dynamic acive nav links on live page 
 
@@ -49,9 +53,11 @@ const loadComponent = async (id, file) => {
         });
     }
 
-    xmarkIcon.addEventListener("click", () => {
-        navBer.classList.remove("navber--open");
-    });
+    if (xmarkIcon) {
+        xmarkIcon.addEventListener("click", () => {
+            navBer.classList.remove("navber--open");
+        });
+    }
 
     // handle scroll up button 
 
@@ -89,38 +95,50 @@ const loadComponent = async (id, file) => {
     // handle subscribe form
     const subscribeForm = document.querySelector('#subscribeForm');
 
-    subscribeForm.addEventListener("submit", (e) => {
-        e.preventDefault();
+    if (subscribeForm) {
+        subscribeForm.addEventListener("submit", (e) => {
+            e.preventDefault();
 
-        const email = subscribeForm.email.value;
-        if (email) {
-            // toast message 
-            const toast = document.createElement("div");
-            toast.classList.add("toast");
-            toast.textContent = `Your email: ${email}`;
-            document.body.appendChild(toast);
+            const email = subscribeForm.email.value;
+            if (email) {
+                // toast message 
+                const toast = document.createElement("div");
+                toast.classList.add("toast");
+                toast.textContent = `Your email: ${email}`;
+                document.body.appendChild(toast);
 
-            setTimeout(() => {
-                toast.remove();
-            }, 5000);
+                setTimeout(() => {
+                    toast.remove();
+                }, 5000);
 
-            // resete form 
-            subscribeForm.reset();
-        }
-    });
+                // resete form 
+                subscribeForm.reset();
+            }
+        });
+    }
 
 };
 
 loadComponent("header", "/src/components/header.html")
 loadComponent("subscribe", "/src/components/subcription.html")
-loadComponent("check", "/src/components/checkResipes.html")
 loadComponent("footer", "/src/components/footer.html")
 
-// set logcal storage resipes data 
 
-window.localStorage.setItem("resipes", JSON.stringify(products))
+const instraBtn = document.querySelector(".btn__view--instagram")
 
+if (instraBtn) {
+
+    instraBtn.addEventListener("click", () => {
+        window.open("https://instagram.com/", "_blank")
+    })
+}
+
+
+
+// blog page 
 const blog = document.querySelectorAll(".single__blog")
+
+console.log(blog);
 
 blog.forEach(blogPost => {
     blogPost.addEventListener("click", () => {

@@ -1,5 +1,7 @@
-// get data from localStorage 
 
+import checkResipes from "../checkResipes";
+
+// get data from localStorage 
 const data = JSON.parse(localStorage.getItem('resipes')) || [];
 
 // get resipe id from url 
@@ -13,10 +15,13 @@ if (resipe) {
 
     const resipeTitle = document.querySelector(".page__title");
     const category = document.querySelector(".category");
-    const resipeImg = document.querySelector(".resipe__video");
+    const resipeImg = document.querySelector(".video");
 
     resipeTitle.innerHTML = `<h1>${resipe.title}</h1>`;
     category.innerHTML = `<span>${resipe.category}</span>`;
     resipeImg.innerHTML = `  <img src="../../${resipe.img}" alt="">`;
+
+    // check resipes 
+    checkResipes(data)
 }
 

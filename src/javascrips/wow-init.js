@@ -1,4 +1,5 @@
-wow = new WOW(
+// wow js 
+const wow = new WOW(
     {
         boxClass: 'wow',      // default
         animateClass: 'animated', // default

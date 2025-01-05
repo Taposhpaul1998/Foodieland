@@ -11,11 +11,15 @@
     <link rel="stylesheet" href="../css/resipes.css">
     <!-- font awesome  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" />
+    <!-- wow js link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
 </head>
 
 <body>
     <!-- header section start  -->
-    <section id="header" class="header__wrapper ">
+    <section id="header" class="header__wrapper wow ">
 
     </section>
     <!-- header section end  -->
@@ -41,7 +45,13 @@
                 <select id="category">
                     <option value="">All Category</option>
                 </select>
+                <!-- favorite resipw show btn  -->
+                <button class="favorite__btn">
+                    <i class="fa-solid fa-heart"></i>
+                    <span id="toggle_text"> Favorite</span>
+                </button>
 
+                <!-- resipe result count show  -->
                 <div class="results__count">
                     <span class="count__text"></span>
                 </div>
@@ -102,11 +112,11 @@
     </section>
     <!-- resipes section  end-->
     <!-- Subscribe card start -->
-    <section id="subscribe" class="subscribe__wrapper">
+    <section id="subscribe" class="subscribe__wrapper wow">
     </section>
     <!-- Subscribe card end -->
     <!-- footer section start  -->
-    <section id="footer" class="footer__wrapper">
+    <section id="footer" class="footer__wrapper wow">
     </section>
     <!-- footer section end  -->
     <!-- javascript  -->
