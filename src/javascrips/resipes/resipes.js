@@ -30,8 +30,9 @@ const displayResipes = (resipes) => {
         resipes.forEach((resipe) => {
             const clone = template.content.cloneNode(true);
             clone.querySelector(".cart__img").src = `../../${resipe.img}`;
-            clone.querySelector(".cart__title").textContent = resipe.title;
+            clone.querySelector(".cart__title").textContent = `${resipe.title.length > 48 ? resipe.title.slice(0, 47) + "..." : resipe.title}`;
             clone.querySelector(".category").textContent = resipe.category;
+
 
             clone.querySelector(".fa-heart").classList.add(resipe.favorite && "favorite__cart");
 

@@ -1,5 +1,6 @@
 
 import checkResipes from "../checkResipes";
+import suggetResipes from "../suggetResipes";
 
 // get data from localStorage 
 const data = JSON.parse(localStorage.getItem('resipes')) || [];
@@ -20,6 +21,9 @@ if (resipe) {
     resipeTitle.innerHTML = `<h1>${resipe.title}</h1>`;
     category.innerHTML = `<span>${resipe.category}</span>`;
     resipeImg.innerHTML = `  <img src="../../${resipe.img}" alt="">`;
+
+    // sugget Resipes 
+    suggetResipes(data)
 
     // check resipes 
     checkResipes(data)

@@ -233,6 +233,11 @@ li {
   align-items: center;
 }
 
+.suggest__single--resipe:hover {
+  cursor: pointer;
+}
+
+
 .single__recipe {
   gap: 24px;
 }
@@ -245,6 +250,11 @@ li {
   width: 100%;
   object-fit: cover;
   border-radius: 20px;
+  transition: .3s ease;
+}
+
+.suggest__single--resipe:hover .recipe__img img {
+  transform: scale(1.05);
 }
 
 .recipe__name--author {

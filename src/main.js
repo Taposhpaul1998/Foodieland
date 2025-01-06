@@ -138,8 +138,6 @@ if (instraBtn) {
 // blog page 
 const blog = document.querySelectorAll(".single__blog")
 
-console.log(blog);
-
 blog.forEach(blogPost => {
     blogPost.addEventListener("click", () => {
         window.location.href = "/src/pages/blogDetails"
