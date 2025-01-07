@@ -1,3 +1,4 @@
+const header = `
 <div class="container header__continer">
     <a href="/" class="wow animate__slideInLeft" data-wow-duration="1s">
         <h4 class="logo">Foodieland<span>.</span></h4>
@@ -27,3 +28,6 @@
     </ul>
 
 </div>
+`
+const headerElement = document.querySelector("#header")
+headerElement.innerHTML = header

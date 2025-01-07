@@ -1,127 +1,46 @@
 import "./javascrips/setDataLocalStorage.js"
+import "./javascrips/header/headerMenu.js"
 import "./javascrips/home/testyResipes.js";
 import "./javascrips/resipes/resipes.js";
 import "./javascrips/blog/blog.js"
 import "./javascrips/contact/contact.js"
+import "./javascrips/subcribe/subbcrie.js"
 
 
-// Load component function
 
-const loadComponent = async (id, file) => {
-    const response = await fetch(file);
-    const content = await response.text();
-    const element = document.getElementById(id)
-    if (element) {
-        element.innerHTML = content
-    }
+// handle scroll up button 
 
-    // dynamic acive nav links on live page 
+const scrollUpBtn = document.querySelector(".scrollup__btn");
 
-    const links = document.querySelectorAll(".nav__link")
-    const currentPath = window.location.pathname
+if (scrollUpBtn) {
+    window.addEventListener("scroll", () => {
+        const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrollPosition = document.documentElement.scrollTop;
 
-    // Remove active class from all links
-    links.forEach(link => link.classList.remove("navber__list--active"))
+        // Calculate scroll percentage
+        const scrollPercent = Math.round((scrollPosition / scrollHeight) * 100)
 
-    // Add active class to the current link
-    links.forEach(link => {
-        const href = link.getAttribute("href")
-
-        if (href === currentPath) {
-            link.classList.add("navber__list--active")
+        // Show or hide scroll up button
+        if (scrollPosition > 200) {
+            scrollUpBtn.classList.add("visible");
+        } else {
+            scrollUpBtn.classList.remove("visible");
         }
-        else if (currentPath === "/src/pages/resipeDetails" && href === "/src/pages/resipes") {
-            link.classList.add("navber__list--active")
-        }
-        else if (currentPath === "/src/pages/blogDetails" && href === "/src/pages/blog") {
-            link.classList.add("navber__list--active")
-        }
+        scrollUpBtn.style.background = `conic-gradient(#ff5200fa ${scrollPercent}%, #d7d7d7 ${scrollPercent}%)`;
 
-    })
+    });
 
+    // smooth scroll 
 
-    // handle  menu  
-    const navBer = document.querySelector(".navber");
-    const barIcon = document.querySelector(".bar__icon");
-    const xmarkIcon = document.querySelector(".xmark__icon")
-
-
-
-    if (barIcon) {
-        barIcon.addEventListener("click", () => {
-            navBer.classList.add("navber--open");
+    scrollUpBtn.addEventListener("click", () => {
+        document.documentElement.scrollTo({
+            top: 0,
+            behavior: "smooth",
         });
-    }
-
-    if (xmarkIcon) {
-        xmarkIcon.addEventListener("click", () => {
-            navBer.classList.remove("navber--open");
-        });
-    }
-
-    // handle scroll up button 
-
-    const scrollUpBtn = document.querySelector(".scrollup__btn");
-
-    if (scrollUpBtn) {
-        window.addEventListener("scroll", () => {
-            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            const scrollPosition = document.documentElement.scrollTop;
-
-            // Calculate scroll percentage
-            const scrollPercent = Math.round((scrollPosition / scrollHeight) * 100)
-
-            // Show or hide scroll up button
-            if (scrollPosition > 200) {
-                scrollUpBtn.classList.add("visible");
-            } else {
-                scrollUpBtn.classList.remove("visible");
-            }
-            scrollUpBtn.style.background = `conic-gradient(#ff5200fa ${scrollPercent}%, #d7d7d7 ${scrollPercent}%)`;
-
-        });
-
-        // smooth scroll 
-
-        scrollUpBtn.addEventListener("click", () => {
-            document.documentElement.scrollTo({
-                top: 0,
-                behavior: "smooth",
-            });
-        });
-    }
+    });
+}
 
 
-    // handle subscribe form
-    const subscribeForm = document.querySelector('#subscribeForm');
-
-    if (subscribeForm) {
-        subscribeForm.addEventListener("submit", (e) => {
-            e.preventDefault();
-
-            const email = subscribeForm.email.value;
-            if (email) {
-                // toast message 
-                const toast = document.createElement("div");
-                toast.classList.add("toast");
-                toast.textContent = `Your email: ${email}`;
-                document.body.appendChild(toast);
-
-                setTimeout(() => {
-                    toast.remove();
-                }, 5000);
-
-                // resete form 
-                subscribeForm.reset();
-            }
-        });
-    }
-
-};
-
-loadComponent("header", "/src/components/header.html")
-loadComponent("subscribe", "/src/components/subcription.html")
-loadComponent("footer", "/src/components/footer.html")
 
 
 const instraBtn = document.querySelector(".btn__view--instagram")
@@ -134,15 +53,6 @@ if (instraBtn) {
 }
 
 
-
-// blog page 
-const blog = document.querySelectorAll(".single__blog")
-
-blog.forEach(blogPost => {
-    blogPost.addEventListener("click", () => {
-        window.location.href = "/src/pages/blogDetails"
-    })
-})
 
 
 

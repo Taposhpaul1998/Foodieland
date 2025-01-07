@@ -1,3 +1,4 @@
+const footer = `
 <div class="container">
     <div class="footer__menu flex">
         <div class="lego__text wow animate__slideInLeft" data-wow-duration="1s">
@@ -7,10 +8,10 @@
             <p>Lorem ipsum dolor sit amet, consectetuipisicing elit, </p>
         </div>
         <ul class="navber__list navber__list--footer flex wow animate__slideInRight" data-wow-duration="1s">
-            <li><a href="/src/pages/resipes.html">Resipes</a></li>
-            <li><a href="/src/pages/blog.html">Blog</a></li>
-            <li><a href="/src/pages/contact.html">Contact</a></li>
-            <li><a href="/src/pages/about.html">About Us</a></li>
+            <li><a href="/src/pages/resipes">Resipes</a></li>
+            <li><a href="/src/pages/blog">Blog</a></li>
+            <li><a href="/src/pages/contact">Contact</a></li>
+            <li><a href="/src/pages/about">About Us</a></li>
         </ul>
     </div>
     <div class="footer__social wow animate__slideInUp" data-wow-duration="1s">
@@ -26,3 +27,8 @@
 <div class="scrollup__btn">
     <i class="fa-solid fa-angle-up"></i>
 </div>
+`
+
+const footerElement = document.querySelector("#footer")
+
+footerElement.innerHTML = footer

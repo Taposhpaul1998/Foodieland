@@ -16,7 +16,7 @@
 <body>
     <!-- header section start  -->
     <section id="header" class="header__wrapper ">
-
+        <script src="../javascrips/components/header.js"></script>
     </section>
     <!-- header section end  -->
     <section class="blog__wrapper">
@@ -29,162 +29,60 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                         labore et dolore</p>
                 </div>
-                <div class="search__input">
+                <form id="search__blog" class="search__input">
                     <input class="search__input--fild" type="search" placeholder="Search article, news or recipe..."
-                        id="">
-                    <input class="btn search__btn" type="button" value="Search">
-                </div>
+                        id="search">
+                    <input class="btn search__btn" type="submit" value="Search">
+                </form>
             </div>
+            <!-- blogs  -->
             <div class="blog__container">
                 <div class="blogs__list">
-                    <div class="single__blog">
-                        <div class="blog__img">
-                            <img src="../../assets/images/blog__img/blog-img 1.png" alt="">
-                        </div>
-                        <div class="blog__info">
-                            <div class="blog__text-area">
-                                <h3>Crochet Projects for Noodle Lovers</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqut enim </p>
-                            </div>
-                            <div class="Blog__writer-date">
-                                <div class="writer">
-                                    <img src="../../assets/images/blog__img/wade-warren-img.png" alt="">
-                                    <h6>Wade Warren</h6>
-                                </div>
-                                <div class="date"><span>12 November 2021</span></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="single__blog">
-                        <div class="blog__img">
-                            <img src="../../assets/images/home-image/superfood-boosts.png" alt="">
-                        </div>
-                        <div class=" blog__info">
-                            <div class="blog__text-area">
-                                <h3>10 Vegetarian Recipes To Eat This Month</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqut enim </p>
-                            </div>
-                            <div class="Blog__writer-date">
-                                <div class="writer">
-                                    <img src="../../assets/images/blog__img/Robert-fox.png" alt="">
-                                    <h6>Robert Fox</h6>
-                                </div>
-                                <div class="date"><span>12 November 2021</span></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="single__blog">
-                        <div class="blog__img">
-                            <img src="../../assets/images/blog__img/blog-img 3.png" alt="">
-                        </div>
-                        <div class="blog__info">
-                            <div class="blog__text-area">
-                                <h3>Full Guide to Becoming a Professional Chef</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqut enim </p>
-                            </div>
-                            <div class="Blog__writer-date">
-                                <div class="writer">
-                                    <img src="../../assets/images/blog__img/Dianne-russell.png" alt="">
-                                    <h6>Dianne Russell</h6>
-                                </div>
-                                <div class="date"><span>12 November 2021</span></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="single__blog">
-                        <div class="blog__img">
-                            <img src="../../assets/images/blog__img/blog-img 4.png" alt="">
-                        </div>
-                        <div class="blog__info">
-                            <div class="blog__text-area">
-                                <h3>Simple & Delicious Vegetarian Lasagna</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqut enim </p>
-                            </div>
-                            <div class="Blog__writer-date">
-                                <div class="writer">
-                                    <img src="../../assets/images/blog__img/Leslie-alexander.png" alt="">
-                                    <h6>Leslie Alexander</h6>
-                                </div>
-                                <div class="date"><span>12 November 2021</span></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="single__blog">
-                        <div class="blog__img">
-                            <img src="../../assets/images/blog__img/blog-img 5.png" alt="">
-                        </div>
-                        <div class="blog__info">
-                            <div class="blog__text-area">
-                                <h3>Plantain and Pinto Stew with Aji Verde</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqut enim </p>
-                            </div>
-                            <div class="Blog__writer-date">
-                                <div class="writer">
-                                    <img src="../../assets/images/blog__img//Courtney-henry.png" alt="">
-                                    <h6>Courtney Henry</h6>
-                                </div>
-                                <div class="date"><span>12 November 2021</span></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="single__blog">
-                        <div class="blog__img">
-                            <img src="../../assets/images/blog__img/blog-img 6.png" alt="">
-                        </div>
-                        <div class="blog__info">
-                            <div class="blog__text-area">
-                                <h3>We’re Hiring a Communications Assistant!</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqut enim </p>
-                            </div>
-                            <div class="Blog__writer-date">
-                                <div class="writer">
-                                    <img src="../../assets/images/blog__img/Albert-flores.png" alt="">
-                                    <h6>Albert Flores</h6>
-                                </div>
-                                <div class="date"><span>12 November 2021</span></div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
+                <!-- blog template  -->
+                <template id="blog__template">
+                    <div class="single__blog">
+                        <div class="blog__img">
+                            <img class="blog__main-img" src="" alt="">
+                        </div>
+                        <div class="blog__info">
+                            <div class="blog__text-area">
+                                <h3 class="title"></h3>
+                                <p>Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqut enim </p>
+                            </div>
+                            <div class="Blog__writer-date">
+                                <div class="writer">
+                                    <img class="photo" src="../../assets/images/blog__img/wade-warren-img.png" alt="">
+                                    <h6 class="name">Wade Warren</h6>
+                                </div>
+                                <div class="date"><span class="blog__date">12 November 2021</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </template>
+                <!-- suggest resipes  -->
                 <div class="suggest__resipes">
                     <div class="suggest__resipes-title">
                         <h3>Tasty Recipes</h3>
                     </div>
                     <div class="suggest__resipes-list">
-                        <div class="single__recipe suggest__single--resipe">
-                            <div class="recipe__img">
-                                <img src="../../assets/images/home-image/image 30.png" alt="">
-                            </div>
-                            <div class="recipe__name--author">
-                                <h4>Chicken Meatballs with Cream Cheese </h4>
-                                <span>By Andreas Paula</span>
-                            </div>
-                        </div>
-                        <div class="single__recipe suggest__single--resipe">
-                            <div class="recipe__img">
-                                <img src="../../assets/images/home-image/image 33.png" alt="">
-                            </div>
-                            <div class="recipe__name--author">
-                                <h4>Traditional Bolognaise Ragu</h4>
-                                <span>By Andreas Paula</span>
-                            </div>
-                        </div>
-                        <div class="single__recipe suggest__single--resipe">
-                            <div class="recipe__img">
-                                <img src="../../assets/images/blog__img/blog-resipes-img 3.png" alt="">
-                            </div>
-                            <div class="recipe__name--author">
-                                <h4>Pork and Chive Chinese Dumplings</h4>
-                                <span>By Andreas Paula</span>
-                            </div>
-                        </div>
                     </div>
+                    <!-- template suggest resipes -->
+
+                    <template id="suggest__resipes-template">
+                        <div class="single__recipe suggest__single--resipe">
+                            <div class="recipe__img">
+                                <img class="suggest__single--img" src="" alt="">
+                            </div>
+                            <div class="recipe__name--author">
+                                <h4 class="restipe__title"></h4>
+                                <span>By Andreas Paula</span>
+                            </div>
+                        </div>
+                    </template>
+
+                    <!-- ads  -->
                     <div class=" ads">
                         <img src="../../assets/images/home-image/Ads.png" alt="">
                     </div>
@@ -215,10 +113,12 @@
 
     <!-- Subscribe card start -->
     <section id="subscribe" class="subscribe__wrapper">
+        <script src="../javascrips/components/subcription.js"></script>
     </section>
     <!-- Subscribe card end -->
     <!-- footer section start  -->
     <section id="footer" class="footer__wrapper">
+        <script src="../javascrips/components/footer.js"></script>
     </section>
     <!-- footer section end  -->
     <!-- javascript  -->

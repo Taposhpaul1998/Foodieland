@@ -1,3 +1,4 @@
+const subcription = `
 <div class="container subscribe__wrapper--container">
     <div class="subscribe__title ">
         <div class="section__title wow animate__slideInUp" data-wow-duration="1s">
@@ -18,3 +19,7 @@
     <img class="subscribe__bg--right wow animate__slideInRight" data-wow-duration="1.5s"
         src="../../assets/images/home-image/Photo-subscribe-bg.png" alt="">
 </div>
+`
+
+const subcriptionElement = document.querySelector("#subscribe")
+subcriptionElement.innerHTML = subcription

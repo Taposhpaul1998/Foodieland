@@ -26,16 +26,20 @@ const displayResipes = (resipes) => {
         // display resipes
         const resipesCards = document.querySelector(".resipes__cards");
         const template = document.querySelector("#resipe__template");
+
+        // replace 
         resipesCards.replaceChildren();
+
+
         resipes.forEach((resipe) => {
             const clone = template.content.cloneNode(true);
             clone.querySelector(".cart__img").src = `../../${resipe.img}`;
             clone.querySelector(".cart__title").textContent = `${resipe.title.length > 48 ? resipe.title.slice(0, 47) + "..." : resipe.title}`;
             clone.querySelector(".category").textContent = resipe.category;
 
-
+            // toggle class 
             clone.querySelector(".fa-heart").classList.add(resipe.favorite && "favorite__cart");
-
+            // update favorite cart 
             const favoriteCart = clone.querySelector(".fa-heart");
             clone.querySelector(".single__cart").addEventListener("click", (e) => {
 
@@ -60,7 +64,7 @@ const displayResipes = (resipes) => {
 displayResipes(allResipes)
 
 // search resipes
-const searchForm = document.querySelector(".search__input");
+const searchForm = document.querySelector("#search__resipe");
 
 if (searchForm) {
     searchForm.addEventListener("submit", (e) => {
@@ -126,6 +130,8 @@ if (favorite) {
         else {
             toggleText.textContent = "Favorite Resipe"
             displayResipes(allResipes);
+
+            favorite.classList.remove("favorite-active")
         }
         // reset search input
         searchForm.search.value = "";

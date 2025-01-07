@@ -20,7 +20,7 @@ export default function checkResipes(resipes) {
 
                 resipe.favorite = !resipe.favorite;
                 favoriteCart.classList.toggle("favorite__cart");
-                localStorage.setItem("resipes", JSON.stringify(allResipes));
+                localStorage.setItem("resipes", JSON.stringify(resipes));
 
             }
             else if (e.target !== favoriteCart) {
