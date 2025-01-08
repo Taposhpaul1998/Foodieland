@@ -158,6 +158,11 @@
         right: 9px;
     }
 
+    .select__category {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
     .blog__paginetion .pagination {
         gap: 7px;
     }

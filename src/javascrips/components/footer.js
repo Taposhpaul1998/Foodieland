@@ -31,4 +31,4 @@ const footer = `
 
 const footerElement = document.querySelector("#footer")
 
-footerElement.innerHTML = footer
+footerElement.insertAdjacentHTML("afterbegin", footer)

@@ -1,9 +1,9 @@
 const header = `
 <div class="container header__continer">
-    <a href="/" class="wow animate__slideInLeft" data-wow-duration="1s">
+    <a href="/">
         <h4 class="logo">Foodieland<span>.</span></h4>
     </a>
-    <div class="navber wow animate__slideInDown" data-wow-duration="1s">
+    <div class="navber">
         <ul class="flex navber__list">
             <li><a class="nav__link" href="/">Home</a></li>
             <li><a class="nav__link" href="/src/pages/resipes">Recipes</a></li>
@@ -11,7 +11,7 @@ const header = `
             <li><a class="nav__link" href="/src/pages/contact">Contact</a></li>
             <li><a class="nav__link" href="/src/pages/about">About us</a></li>
         </ul>
-        <ul class="socile__icon flex wow animate__slideInRight" data-wow-duration="1s">
+        <ul class="socile__icon flex">
             <li><a href="https://www.facebook.com"><i class="fa-brands fa-facebook-f"></i></a></li>
             <li><a href="https://www.twitter.com"><i class="fa-brands fa-twitter"></i></a></li>
             <li><a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a></li>
@@ -30,4 +30,4 @@ const header = `
 </div>
 `
 const headerElement = document.querySelector("#header")
-headerElement.innerHTML = header
+headerElement.insertAdjacentHTML("afterbegin", header)

@@ -14,12 +14,12 @@ const subcription = `
         <button type="submit" class="btn subscribe__btn ">Subscribe</button>
     </form>
     <img class="subscribe__bg--left wow animate__slideInLeft" data-wow-duration="1.5s"
-        src="../../assets/images/home-image/kisspng-salad-salad-fresh-food-healthylife-vegetables-vegetarian-5d42e3a7cb8543 1.png"
+        src="../../assets/kisspng-salad-salad-fresh-food-healthylife-vegetables-vegetarian-5d42e3a7cb8543 1.png"
         alt="">
     <img class="subscribe__bg--right wow animate__slideInRight" data-wow-duration="1.5s"
-        src="../../assets/images/home-image/Photo-subscribe-bg.png" alt="">
+        src="../../assets/Photo-subscribe-bg.png" alt="">
 </div>
 `
 
 const subcriptionElement = document.querySelector("#subscribe")
-subcriptionElement.innerHTML = subcription
+subcriptionElement.insertAdjacentHTML("afterbegin", subcription)

@@ -5,7 +5,7 @@ import moreResipes from "./moreResipes";
 let resipes = JSON.parse(localStorage.getItem('resipes')) || [];
 
 const ads = {
-    img: "assets/images/home-image/Ads.png",
+    img: "assets/Ads.png",
     id: "ads"
 }
 

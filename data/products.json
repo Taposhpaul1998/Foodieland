@@ -2,112 +2,112 @@
     {
         "id": "12345",
         "title": "Big and Juicy Wagyu Beef Cheeseburger",
-        "img": "assets/images/home-image/image 26.png",
+        "img": "assets/image 26.png",
         "category": "Snack",
         "favorite": true
     },
     {
         "id": "12346",
         "title": "Fresh Lime Roasted Salmon with Ginger Sauce",
-        "img": "assets/images/home-image/image 27.png",
+        "img": "assets/image 27.png",
         "category": "Fish",
         "favorite": false
     },
     {
         "id": "12347",
         "title": "Strawberry Oatmeal Pancake with Honey Syrup",
-        "img": "assets/images/home-image/image 28.png",
+        "img": "assets/image 28.png",
         "category": "Breakfast",
         "favorite": false
     },
     {
         "id": "12348",
         "title": "Fresh and Healthy Mixed Mayonnaise Salad",
-        "img": "assets/images/home-image/image 29.png",
+        "img": "assets/image 29.png",
         "category": "Healthy",
         "favorite": true
     },
     {
         "id": "12349",
         "title": "Chicken Meatballs with Cream Cheese",
-        "img": "assets/images/home-image/image 30.png",
+        "img": "assets/image 30.png",
         "category": "Meat",
         "favorite": false
     },
     {
         "id": "12350",
         "title": "Fruity Pancake with Orange & Blueberry",
-        "img": "assets/images/home-image/image 31.png",
+        "img": "assets/image 31.png",
         "category": "Sweet",
         "favorite": true
     },
     {
         "id": "12351",
         "title": "The Best Easy One Pot Chicken and Rice",
-        "img": "assets/images/home-image/image 32.png",
+        "img": "assets/image 32.png",
         "category": "Snack",
         "favorite": false
     },
     {
         "id": "12352",
         "title": "The Creamiest Creamy Chicken and Bacon Pasta",
-        "img": "assets/images/home-image/image 33.png",
+        "img": "assets/image 33.png",
         "category": "Noodles",
         "favorite": false
     },
     {
         "id": "12353",
         "title": "Mixed Tropical Fruit Salad with Superfood Boosts",
-        "img": "assets/images/home-image/superfood-boosts.png",
+        "img": "assets/superfood-boosts.png",
         "category": "Healthy",
         "favorite": true
     },
     {
         "id": "12354",
         "title": "Big and Juicy Wagyu Beef Cheeseburger",
-        "img": "assets/images/home-image/beef-cheesebuger.png",
+        "img": "assets/beef-cheesebuger.png",
         "category": "Western",
         "favorite": false
     },
     {
         "id": "12355",
         "title": "Healthy Japanese Fried Rice with Asparagus",
-        "img": "assets/images/home-image/fried-rice-with-asparagus.png",
+        "img": "assets/fried-rice-with-asparagus.png",
         "category": "Healthy",
         "favorite": true
     },
     {
         "id": "12356",
         "title": "Cauliflower Walnut Vegetarian Taco Meat",
-        "img": "assets/images/home-image/vegetarian-taco-meat.png",
+        "img": "assets/vegetarian-taco-meat.png",
         "category": "Eastern",
         "favorite": false
     },
     {
         "id": "12357",
         "title": "Rainbow Chicken Salad with Almond Honey Mustard Dressing",
-        "img": "assets/images/home-image/chichen-salad.png",
+        "img": "assets/chichen-salad.png",
         "category": "Healthy",
         "favorite": true
     },
     {
         "id": "12358",
         "title": "Barbeque Spicy Sandwiches with Chips ",
-        "img": "assets/images/home-image/sandwiches-with-chips.png",
+        "img": "assets/sandwiches-with-chips.png",
         "category": "Snack",
         "favorite": false
     },
     {
         "id": "12359",
         "title": "Firecracker Vegan Lettuce Wraps - Spicy! ",
-        "img": "assets/images/home-image/vegan-lettuce-wraps-spicy.png",
+        "img": "assets/vegan-lettuce-wraps-spicy.png",
         "category": "Seafood",
         "favorite": false
     },
     {
         "id": "12360",
         "title": "Chicken Ramen Soup with Mushroom ",
-        "img": "assets/images/home-image/chichen-rames-soup-with-mushroom.png",
+        "img": "assets/chichen-rames-soup-with-mushroom.png",
         "category": "japanese",
         "favorite": true
     }

@@ -1,3 +1,6 @@
+import "./javascrips/components/header.js"
+import "./javascrips/components/subcription.js"
+import "./javascrips/components/footer.js"
 import "./javascrips/setDataLocalStorage.js"
 import "./javascrips/header/headerMenu.js"
 import "./javascrips/home/testyResipes.js";
@@ -5,6 +8,8 @@ import "./javascrips/resipes/resipes.js";
 import "./javascrips/blog/blog.js"
 import "./javascrips/contact/contact.js"
 import "./javascrips/subcribe/subbcrie.js"
+import "./javascrips/swiperSlider.js"
+import "./javascrips/wow-init.js"
 
 
 

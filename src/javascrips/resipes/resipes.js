@@ -8,6 +8,8 @@ const categorys = [...new Set(allResipes.map(resipe => resipe.category))];
 
 // favorite btn 
 const favorite = document.querySelector(".favorite__btn")
+// show favorite resipes
+const toggleText = document.querySelector("#toggle_text")
 
 // display resipes 
 
@@ -77,6 +79,7 @@ if (searchForm) {
         displayResipes(resipes);
 
         // remove favorite class
+        toggleText.textContent = "Favorite Resipe"
         favorite.classList.remove("favorite-active")
     });
 
@@ -107,30 +110,30 @@ if (categoryContainer) {
         // reset search input
         searchForm.search.value = "";
         // remove favorite class
+        toggleText.textContent = "Favorite Resipe"
         favorite.classList.remove("favorite-active")
     });
 }
 
-// show favorite resipes
-const toggleText = document.querySelector("#toggle_text")
-
+// hendel favorite btn 
 if (favorite) {
     favorite.addEventListener("click", () => {
         // toggle class 
         favorite.classList.toggle("favorite-active");
-        if (favorite.classList[1] === "favorite-active") {
+        console.log();
 
+        if (favorite.classList.value.includes("favorite-active")) {
             toggleText.textContent = " All Resipe"
 
             // filter favorite resipes
-
             const favoriteResipes = allResipes.filter(resipe => resipe.favorite);
+            console.log(favoriteResipes);
+
             displayResipes(favoriteResipes);
         }
         else {
             toggleText.textContent = "Favorite Resipe"
             displayResipes(allResipes);
-
             favorite.classList.remove("favorite-active")
         }
         // reset search input

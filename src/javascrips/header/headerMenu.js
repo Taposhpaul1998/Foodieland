@@ -11,10 +11,10 @@ links.forEach(link => {
     if (href === currentPath) {
         link.classList.add("navber__list--active")
     }
-    else if (currentPath === "/src/pages/resipeDetails" && href === "/src/pages/resipes") {
+    else if (currentPath.includes("resipeDetails") && href === "/src/pages/resipes") {
         link.classList.add("navber__list--active")
     }
-    else if (currentPath === "/src/pages/blogDetails" && href === "/src/pages/blog") {
+    else if (currentPath.includes("blogDetails") && href === "/src/pages/blog") {
         link.classList.add("navber__list--active")
     }
 
@@ -29,8 +29,6 @@ const xmarkIcon = document.querySelector(".xmark__icon")
 // open menu slide 
 barIcon.addEventListener("click", () => {
     navBer.classList.add("navber--open");
-    console.log(navBer);
-
 });
 
 // close menu slide 
